@@ -25,7 +25,8 @@
 また自分はこう思ったけど、他の人はどんなことをこの音楽から感じたんだろうと思った際に使用していただきたいです。
 
 ## 設計書
-<作成後追加>
+- 画面遷移図
+![Untitled Diagram](https://user-images.githubusercontent.com/84176168/128033254-8c461734-bbaa-4c32-a0e9-9f6f72b93870.jpg)
 
 ## チャレンジ要素一覧
 https://docs.google.com/spreadsheets/d/13xkINjyrOy5WzcaNKxclcb0LEL1ItdBBcmNCpK8X95I/edit?usp=sharing
