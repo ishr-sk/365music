@@ -26,7 +26,7 @@
 
 ## 設計書
 - 画面遷移図
-![Untitled Diagram](https://user-images.githubusercontent.com/84176168/128036310-c5f6947d-fe46-41dd-8c10-2c5f24eab8f7.jpg)
+![Untitled Diagram](https://user-images.githubusercontent.com/84176168/128115903-34ab5d87-c835-46aa-b3fc-baeffa3288cb.jpg)
 
 ## チャレンジ要素一覧
 https://docs.google.com/spreadsheets/d/13xkINjyrOy5WzcaNKxclcb0LEL1ItdBBcmNCpK8X95I/edit?usp=sharing
