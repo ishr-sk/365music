@@ -28,7 +28,7 @@
 - 画面遷移図
 ![Untitled Diagram](https://user-images.githubusercontent.com/84176168/128115903-34ab5d87-c835-46aa-b3fc-baeffa3288cb.jpg)
 - ER図
-![Untitled Diagram (1)](https://user-images.githubusercontent.com/84176168/128154208-8da2fdef-c918-44e6-a315-35b2d82f1bee.jpg)
+![ER図](https://user-images.githubusercontent.com/84176168/128167413-e5ea4267-93db-42bf-b8db-56e0c141f119.jpg)
 - テーブル定義書  
 https://docs.google.com/spreadsheets/d/10bgqbl-mJ0v9IErz8Or6WT0r02H-692C4Relbp5oZnM/edit?usp=sharing
 
