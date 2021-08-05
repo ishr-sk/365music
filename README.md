@@ -1,29 +1,3 @@
-<<<<<<< HEAD
-# README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-=======
 # 365music
 
 ## サイト概要
@@ -55,7 +29,7 @@ Things you may want to cover:
 ![Untitled Diagram](https://user-images.githubusercontent.com/84176168/128115903-34ab5d87-c835-46aa-b3fc-baeffa3288cb.jpg)
 - ER図
 ![ER図](https://user-images.githubusercontent.com/84176168/128167413-e5ea4267-93db-42bf-b8db-56e0c141f119.jpg)
-- テーブル定義書  
+- テーブル定義書
 https://docs.google.com/spreadsheets/d/10bgqbl-mJ0v9IErz8Or6WT0r02H-692C4Relbp5oZnM/edit?usp=sharing
 
 ## チャレンジ要素一覧
@@ -71,4 +45,3 @@ https://docs.google.com/spreadsheets/d/13xkINjyrOy5WzcaNKxclcb0LEL1ItdBBcmNCpK8X
 ## 使用素材
 - 外部サービスの画像素材・音声素材を使用した場合は、必ずサービス名とURLを明記してください。
 - 使用しない場合は、使用素材の項目をREADMEから削除してください。
->>>>>>> origin/main
