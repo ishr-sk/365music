@@ -1,0 +1,32 @@
+<div class='container'>
+  <div class='row'>
+    <div class="col-sm-12 col-md-8 col-lg-5 px-5 px-sm-0 mx-auto">
+      <h4>Editing Post</h4>
+        <%= form_with model: @post, local: true do |f| %>
+          <div class="form-group">
+            <%= f.label :image %>
+            <%= f.attachment_field :image, class: "form-control-file" %>
+          </div>
+          <div class="form-group">
+            <%= f.label :title %>
+            <%= f.text_field :title, class: "form-control" %>
+          </div>
+          <div class="form-group">
+            <%= f.label :artist %>
+            <%= f.text_field :artist, class: "form-control" %>
+          </div>
+          <div class="form-group">
+            <%= f.label :event %>
+            <%= f.text_field :event, class: "form-control" %>
+          </div>
+          <div class="form-group">
+            <%= f.label :caption %>
+            <%= f.text_area :body, class: "form-control" %>
+          </div>
+          <div class="form-group" ontouchstart="">
+            <%= f.submit 'update', class: 'reset button-circle color1' %>
+          </div>
+        <% end %>
+    </div>
+  </div>
+</div>

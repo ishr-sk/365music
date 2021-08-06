@@ -1,14 +1,32 @@
-<h1>new 365</h1>
-<%= form_with model: @post, local:true do |f| %>
-  <h4>image</h4>
-  <%= f.attachment_field :image %>
-  <h4>title</h4>
-  <%= f.text_field :title %>
-  <h4>artist</h4>
-  <%= f.text_field :artist %>
-  <h4>event</h4>
-  <%= f.text_field :event %>
-  <h4>caption</h4>
-  <%= f.text_area :body %>
-  <%= f.submit 'submit' %>
-<% end %>
+<div class='container'>
+  <div class='row'>
+    <div class="col-sm-12 col-md-8 col-lg-5 px-5 px-sm-0 mx-auto">
+      <h4>new 365</h4>
+        <%= form_with model: @post, local:true do |f| %>
+          <div class="form-group">
+            <%= f.label :image %>
+            <%= f.attachment_field :image, class: "form-control-file" %>
+          </div>
+          <div class="form-group">
+            <%= f.label :title %>
+            <%= f.text_field :title, class: "form-control" %>
+          </div>
+          <div class="form-group">
+            <%= f.label :artist %>
+            <%= f.text_field :artist, class: "form-control" %>
+          </div>
+          <div class="form-group">
+            <%= f.label :event %>
+            <%= f.text_field :event, class: "form-control" %>
+          </div>
+          <div class="form-group">
+            <%= f.label :caption %>
+            <%= f.text_area :body, class: "form-control" %>
+          </div>
+          <div class="form-group" ontouchstart="">
+            <%= f.submit 'submit', class: 'reset button-circle color2' %>
+          </div>
+        <% end %>
+    </div>
+  </div>
+</div>
