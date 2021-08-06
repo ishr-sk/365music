@@ -1,0 +1,14 @@
+<h1>new 365</h1>
+<%= form_with model: @post, local:true do |f| %>
+  <h4>image</h4>
+  <%= f.attachment_field :image %>
+  <h4>title</h4>
+  <%= f.text_field :title %>
+  <h4>artist</h4>
+  <%= f.text_field :artist %>
+  <h4>event</h4>
+  <%= f.text_field :event %>
+  <h4>caption</h4>
+  <%= f.text_area :body %>
+  <%= f.submit 'submit' %>
+<% end %>

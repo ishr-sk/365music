@@ -1,0 +1,5 @@
+<% @posts.each do |post| %>
+  <%= link_to post_path(post.id) do %>
+    <%= attachment_image_tag post, :image, width: '20%', height: 'auto', fallback: "noimage.jpg" %>
+  <% end %>
+<% end %>
