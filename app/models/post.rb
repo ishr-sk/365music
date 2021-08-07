@@ -4,6 +4,7 @@ class Post < ApplicationRecord
 
   has_many :post_hashtag_relations
   has_many :hashtags, through: :post_hashtag_relations
+  has_many :post_comments, dependent: :destroy
 
 
   after_create do

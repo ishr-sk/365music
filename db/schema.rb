@@ -10,13 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_08_07_060932) do
+ActiveRecord::Schema.define(version: 2021_08_07_120934) do
 
   create_table "hashtags", force: :cascade do |t|
     t.string "hashname"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["hashname"], name: "index_hashtags_on_hashname", unique: true
+  end
+
+  create_table "post_comments", force: :cascade do |t|
+    t.string "comment"
+    t.integer "user_id"
+    t.integer "post_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "post_hashtag_relations", force: :cascade do |t|

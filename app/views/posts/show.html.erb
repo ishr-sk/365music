@@ -11,11 +11,36 @@
       <li class="list-group-item">song title：<%= @post.title %></li>
       <li class="list-group-item">artist：<%= @post.artist %></li>
       <li class="list-group-item">event：<%= @post.event %></li>
+      <li class="list-group-item">
+        <% @post.post_comments.each do |post_comment| %>
+          <div class="media">
+            <p><%= attachment_image_tag post_comment.user, :profile_image, :fill, 20, 20, fallback: "noimage.jpg", class: "rounded-circle" %></p>
+            <div class="media-body">
+              <b><%= post_comment.user.name %></b>
+              <%= post_comment.comment %>
+                <% if post_comment.user == current_user %>
+                  <div class="comment-delete text-right">
+                  <%= link_to "", post_post_comment_path(post_comment.post, post_comment), method: :delete, class: "text-right btn btn-outline-danger fas fa-trash-alt btn-sm" %>
+                  </div>
+                  <% end %>
+              <small class="text-muted"><%= time_ago_in_words(post_comment.created_at) %></small>
+            </div>
+          </div>
+        <% end %>
+        <div class="form-inline justify-content-end">
+          <%= form_with(model:[@post, @post_comment], local: true) do |f| %>
+            <%= f.text_area :comment, rows:'5',placeholder: "comment", class: "form-control-sm" %>
+            <%= f.button :type => "submit", class: "btn btn-outline-secondary mb-4" do %>
+              <i class="far fa-paper-plane"></i>
+            <% end %>
+          <% end %>
+        </div>
+      </li>
     </ul>
-    <div class="card-body">
+    <div class="card-body text-center">
       <% if @post.user == current_user %>
-        <%= link_to 'Edit', edit_post_path(@post), class: "card-link" %>
-        <%= link_to "Destroy", post_path(@post), method: :delete, "data-confirm" => "本当に消しますか?", class: "card-link" %>
+        <%= link_to '', edit_post_path(@post), class: "btn btn-outline-dark far fa-edit" %>
+        <%= link_to '', post_path(@post), method: :delete, "data-confirm" => "本当に消しますか?", class: "btn btn-outline-danger fas fa-trash-alt" %>
       <% end %>
     </div>
 </div>
