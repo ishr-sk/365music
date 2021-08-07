@@ -3,5 +3,5 @@ Rails.application.routes.draw do
   devise_for :users
   
   resources :posts, only: [:new, :create, :index, :show, :edit, :update, :destroy]
-  
+  get 'post/hashtag/:name' => 'posts#hashtag'
 end

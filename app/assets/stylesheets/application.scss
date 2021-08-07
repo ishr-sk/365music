@@ -34,7 +34,7 @@
 }
 
 $color-1: #447fff;
-$color-2: #ff7d93;
+$color-2: #b1f4cf;
 $color-3: #efff3d;
 $color-4: #ff5722;
 $color-5: #da0080;
@@ -59,9 +59,9 @@ $color-5: #da0080;
   box-shadow: inset 0 -3px 0 rgba(255,255,255,0.5), inset 0 3px 0 rgba(0,0,0,0.2);
   }
   &.color2 {
-    background: linear-gradient($color-2, $color-3);
+    background: linear-gradient(#9890e3 0%, #b1f4cf 100%);
     &:active, &:focus {
-      background: linear-gradient(to top, $color-2, $color-3);
+      background: linear-gradient(to top, #9890e3 0%, #b1f4cf 100%);
     }
   }
   &.color3 {
