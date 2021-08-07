@@ -4,4 +4,7 @@ Rails.application.routes.draw do
   
   resources :posts, only: [:new, :create, :index, :show, :edit, :update, :destroy]
   get 'post/hashtag/:name' => 'posts#hashtag'
+  
+  resources :users, only: [:index, :show, :edit, :update]
+  
 end

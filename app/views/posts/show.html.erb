@@ -2,7 +2,7 @@
   <%= attachment_image_tag @post, :image, fallback: "noimage.jpg", class: "card-img-top" %>
     <div class="card-body">
       <p class="card-text">
-        <b><%= @post.user.name %></b>
+        <b><i class="fas fa-at"><%= @post.user.name %></i></b>
         <small class="text-muted"><%= @post.created_at.strftime('%Y/%m/%d') %></small>
       </p>
       <p class="card-text"><%= render_with_hashtags(@post.body) %></p>

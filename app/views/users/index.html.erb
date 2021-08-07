@@ -1,0 +1,19 @@
+<% @users.each do |user| %>
+  <div class="card" style="width: 35rem;">
+    <div class="media">
+      <%= link_to user_path(user.id) do %>
+        <%= attachment_image_tag user, :profile_image, :fill, 80, 80, fallback: "noimage.jpg", class: "mr-3 align-self-start rounded-circle" %>
+      <% end %>
+      <div class="media-body">
+        <div class="link">
+          <%= link_to user_path(user.id) do %>
+            <b><i class="fas fa-at"><%= user.name %></i></b>
+          <% end %>
+        </div>
+          <small class="text-dark">favorite artist<i class="fas fa-headphones-alt"></i><%= user.artist %></small></br>
+          <i><%= user.introduction %></i>
+      </div>
+    </div>
+  </div>
+<% end %>
+  
