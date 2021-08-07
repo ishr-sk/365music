@@ -1,0 +1,2 @@
+<!--alert('いいね取り消し');-->
+$("#likes-<%= @post.id %>").html("<%= j(render 'likes/like-btn', post: @post) %>");
