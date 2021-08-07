@@ -1,0 +1,4 @@
+$("#comments-index-<%= @post.id %>").html("<%= j(render 'post_comments/index', post: @post) %>");
+$("textarea").val("");
+
+<!--alert('コメント投稿！');-->

@@ -1,0 +1,15 @@
+<% post.post_comments.each do |post_comment| %>
+  <div class="media">
+    <p><%= attachment_image_tag post_comment.user, :profile_image, :fill, 20, 20, fallback: "noimage.jpg", class: "rounded-circle" %></p>
+    <div class="media-body">
+      <b><%= post_comment.user.name %></b>
+      <%= post_comment.comment %>
+        <% if post_comment.user == current_user %>
+          <div class="comment-delete text-right">
+          <%= link_to "", post_post_comment_path(post_comment.post, post_comment), method: :delete, remote: true, class: "text-right btn btn-outline-danger fas fa-trash-alt btn-sm" %>
+          </div>
+          <% end %>
+      <small class="text-muted"><%= time_ago_in_words(post_comment.created_at) %></small>
+    </div>
+  </div>
+<% end %>

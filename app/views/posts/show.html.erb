@@ -13,27 +13,13 @@
       <li class="list-group-item">artist：<%= @post.artist %></li>
       <li class="list-group-item">event：<%= @post.event %></li>
       <li class="list-group-item">
-        <% @post.post_comments.each do |post_comment| %>
-          <div class="media">
-            <p><%= attachment_image_tag post_comment.user, :profile_image, :fill, 20, 20, fallback: "noimage.jpg", class: "rounded-circle" %></p>
-            <div class="media-body">
-              <b><%= post_comment.user.name %></b>
-              <%= post_comment.comment %>
-                <% if post_comment.user == current_user %>
-                  <div class="comment-delete text-right">
-                  <%= link_to "", post_post_comment_path(post_comment.post, post_comment), method: :delete, class: "text-right btn btn-outline-danger fas fa-trash-alt btn-sm" %>
-                  </div>
-                  <% end %>
-              <small class="text-muted"><%= time_ago_in_words(post_comment.created_at) %></small>
-            </div>
-          </div>
-        <% end %>
+        <div id="comments-index-<%= @post.id %>">
+          <%= render 'post_comments/index', post: @post %>
+        </div>
         <div class="form-inline justify-content-end">
-          <%= form_with model:[@post, @post_comment] do |f| %>
-            <%= f.text_area :comment, rows:'5',placeholder: "comment", class: "form-control-sm" %>
-            <%= f.button :type => "submit", class: "btn btn-outline-secondary mb-4" do %>
-              <i class="far fa-paper-plane"></i>
-            <% end %>
+          <%= form_with model:[@post, @post_comment], remote: true do |f| %>
+            <%= f.text_area :comment, rows:'5',placeholder: "commentする", class: "form-control-sm" %>
+            <%= f.submit "送信", class: "btn btn-outline-secondary btn-sm mb-4" %>
           <% end %>
         </div>
       </li>
