@@ -17,6 +17,12 @@
  @import 'font-awesome-sprockets';
  @import 'font-awesome';
 
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@500&display=swap');
+
+  div {
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+  }
+
 // ボタンのレイアウト
 .reset {
   color: black;
