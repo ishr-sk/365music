@@ -1,18 +1,24 @@
-<h4>my page</h4>
-
-    <div class="media">
-      <%= attachment_image_tag @user, :profile_image, :fill, 100, 100, fallback: "noimage.jpg", class: "mr-3 align-self-start rounded-circle" %>
-        <div class="media-body">
-          <b><i class="fas fa-at"><%= @user.name %></i></b>
-
-    	  <small class="text-dark">favorite artist<i class="fas fa-headphones-alt"></i><%= @user.artist %></small></br>
-        <i><%= @user.introduction %></i>
-        <% if @user.id == current_user.id %>
-          <p><%= link_to "Edit", edit_user_path(@user) %></p>
-        <% end %>
-        </div>
-    </div>
-    フォロー数： <%= @user.followings.count %>
-    フォロワー数： <%= @user.followers.count %>
-<p><%=link_to "フォロー", followings_user_path(@user.id) %></p>
-<p><%=link_to "フォロワー", followers_user_path(@user.id) %></p>
+  <% if @user.id == current_user.id %>
+    <h4>my page</h4>
+  <% else %>
+    <h4>user info</h4>
+  <% end %>
+  <div class="media">
+    <%= attachment_image_tag @user, :profile_image, :fill, 100, 100, fallback: "noimage.jpg", class: "mr-3 align-self-start rounded-circle" %>
+      <div class="media-body">
+        <b><i class="fas fa-at"><%= @user.name %></i></b>
+  	    <small class="text-dark">favorite artist<i class="fas fa-headphones-alt"></i><%= @user.artist %></small></br>
+        <i><%= @user.introduction %></i></br>
+        <small class="text-dark">
+          <%= link_to followings_user_path(@user.id) do %>
+            <%= @user.followings.count %> フォロー中
+          <% end %>｜
+          <%= link_to followers_user_path(@user.id) do %>
+            <%= @user.followers.count %> フォロワー
+          <% end %>
+        </small></br>
+          <% if @user.id == current_user.id %>
+            <%= link_to "Edit", edit_user_path(@user), class: "btn btn-outline-dark btn-sm" %>
+          <% end %>
+      </div>
+  </div>
