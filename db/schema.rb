@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_08_07_143952) do
+ActiveRecord::Schema.define(version: 2021_08_08_030719) do
 
   create_table "hashtags", force: :cascade do |t|
     t.string "hashname"
@@ -50,6 +50,13 @@ ActiveRecord::Schema.define(version: 2021_08_07_143952) do
     t.text "body"
     t.integer "user_id"
     t.string "image_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "relationships", force: :cascade do |t|
+    t.integer "follower_id"
+    t.integer "followed_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
