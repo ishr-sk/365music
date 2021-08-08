@@ -1,24 +1,32 @@
-  <% if @user.id == current_user.id %>
-    <h4>my page</h4>
-  <% else %>
-    <h4>user info</h4>
-  <% end %>
-  <div class="media">
-    <%= attachment_image_tag @user, :profile_image, :fill, 100, 100, fallback: "noimage.jpg", class: "mr-3 align-self-start rounded-circle" %>
-      <div class="media-body">
-        <b><i class="fas fa-at"><%= @user.name %></i></b>
-  	    <small class="text-dark">favorite artist<i class="fas fa-headphones-alt"></i><%= @user.artist %></small></br>
-        <i><%= @user.introduction %></i></br>
-        <small class="text-dark">
-          <%= link_to followings_user_path(@user.id) do %>
-            <%= @user.followings.count %> フォロー中
-          <% end %>｜
-          <%= link_to followers_user_path(@user.id) do %>
-            <%= @user.followers.count %> フォロワー
+<% if @user.id == current_user.id %>
+  <h4>my page</h4>
+<% else %>
+  <h4>user info</h4>
+<% end %>
+<div class="media">
+  <%= attachment_image_tag @user, :profile_image, :fill, 100, 100, fallback: "noimage.jpg", class: "mr-3 align-self-start rounded-circle" %>
+    <div class="media-body">
+      <b><i class="fas fa-at"><%= @user.name %></i></b>
+	    <small class="text-dark">favorite artist<i class="fas fa-headphones-alt"></i><%= @user.artist %></small></br>
+      <i><%= @user.introduction %></i></br>
+      <small class="text-dark">
+        <%= link_to followings_user_path(@user.id) do %>
+          <%= @user.followings.count %> フォロー中
+        <% end %>｜
+        <%= link_to followers_user_path(@user.id) do %>
+          <%= @user.followers.count %> フォロワー
+        <% end %>
+      </small></br>
+        <% if @user.id == current_user.id %>
+          <%= link_to "Edit", edit_user_path(@user), class: "btn btn-outline-dark btn-sm" %>
+        <% end %>
+        <!--DM機能ボタン実装（相互のみ表示される）-->
+        <% unless @user.id == current_user.id %>
+          <% if (current_user.followed_by? @user) && (@user.followed_by? current_user) %>
+            <% if current_user != @user %>
+              <%= link_to '', direct_message_path(@user.id), class: "btn far fa-envelope btn-lg" %>
+            <% end %>
           <% end %>
-        </small></br>
-          <% if @user.id == current_user.id %>
-            <%= link_to "Edit", edit_user_path(@user), class: "btn btn-outline-dark btn-sm" %>
-          <% end %>
-      </div>
-  </div>
+        <% end %>
+    </div>
+</div>

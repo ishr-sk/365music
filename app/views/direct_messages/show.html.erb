@@ -1,0 +1,21 @@
+<%= form_with model: @direct_message do |f| %>
+    <%= f.text_field :message %>
+    <%= f.hidden_field :room_id %>
+    <%= f.submit %>
+<% end %>
+<table>
+    <thead>
+        <tr>
+            <td>投稿者名</td>
+            <td>投稿内容</td>
+        </tr>
+    </thead>
+    <tbody>
+        <% @direct_messages.each do |direct_message| %>
+            <tr>
+                <td><%= direct_message.user.name %></td>
+                <td><%= direct_message.message %></td>
+            </tr>
+        <% end %>
+    </tbody>
+</table>
