@@ -1,13 +1,4 @@
 class DirectMessagesController < ApplicationController
-  # def create
-  #   if Entry.where(:user_id => current_user.id, :room_id => params[:direct_message][:room_id]).present?
-  #     @direct_message = DirectMessage.create(params.permit(:user_id, :message, :room_id).merge(:user_id => current_user.id))
-  #     redirect_to "/rooms/#{@direct_message.room_id}"
-  #   else
-  #     redirect_back(fallback_location: root_path)
-  #   end
-  # end
-  
   def show
     @user = User.find(params[:id])
     rooms = current_user.entries.pluck(:room_id)
