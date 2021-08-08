@@ -104,9 +104,9 @@ $color-5: #da0080;
   color:#4169e1;
 }
 
-.box {
+.box_btn {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
 }
 
 /*吹き出し*/
