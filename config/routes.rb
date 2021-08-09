@@ -16,5 +16,7 @@ Rails.application.routes.draw do
   
   get 'direct_message/:id' => 'direct_messages#show', as: 'direct_message'
   resources :direct_messages, only: [:create]
+  
+  resources :setlists, only: [:new, :create, :index, :show, :edit, :update]
 
 end

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_08_08_082037) do
+ActiveRecord::Schema.define(version: 2021_08_09_034459) do
 
   create_table "direct_messages", force: :cascade do |t|
     t.integer "user_id"
@@ -20,6 +20,13 @@ ActiveRecord::Schema.define(version: 2021_08_08_082037) do
     t.datetime "updated_at", null: false
     t.index ["room_id"], name: "index_direct_messages_on_room_id"
     t.index ["user_id"], name: "index_direct_messages_on_user_id"
+  end
+
+  create_table "encores", force: :cascade do |t|
+    t.integer "song_id"
+    t.string "title"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "entries", force: :cascade do |t|
@@ -86,6 +93,23 @@ ActiveRecord::Schema.define(version: 2021_08_08_082037) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_rooms_on_user_id"
+  end
+
+  create_table "setlists", force: :cascade do |t|
+    t.string "artist"
+    t.datetime "date"
+    t.string "event"
+    t.text "venue"
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "songs", force: :cascade do |t|
+    t.integer "setlist_id"
+    t.string "title"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|

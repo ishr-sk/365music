@@ -1,0 +1,29 @@
+<%= form_with model: @setlist, local: true do |s| %>
+    <div class="form-group">
+    <%= s.label :artist %>
+    <%= s.text_field :artist %>
+    </div>
+    <div class="form-group">
+    <%= s.label :date %>
+    <%= s.datetime_field :date %>
+      </div>
+    <div class="form-group">
+    <%= s.label :event %>
+    <%= s.text_field :event %>
+      </div>
+    <div class="form-group">
+    <%= s.label :venue %>
+    <%= s.text_field :venue %>
+    </div>
+    <div class="form-group">
+      <div class="parents">
+          <%= s.fields_for :songs do |t| %>
+              <%= render "song_fields", f: t %>
+          <% end %>
+          <%= link_to_add_association "songを追加", s, :songs %>
+      </div>
+    </div>
+    <div class="actions">
+        <%= s.submit %>
+    </div>
+<% end %>

@@ -1,0 +1,10 @@
+<%= link_to 'セットリスト登録', new_setlist_path %>
+<% @setlists.each do |setlist| %>
+  <div>
+    <%= link_to setlist_path(setlist.id) do %>
+         artist：<%= setlist.artist %>
+    <% end %>
+         event：<%= setlist.event %>
+         venue：<%= setlist.venue %>
+  </div>
+<% end %>

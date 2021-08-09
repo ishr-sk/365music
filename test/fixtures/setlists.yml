@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  artist: MyString
+  date: 2021-08-09 03:40:21
+  event: MyString
+  venue: MyText
+  user_id: 1
+
+two:
+  artist: MyString
+  date: 2021-08-09 03:40:21
+  event: MyString
+  venue: MyText
+  user_id: 1

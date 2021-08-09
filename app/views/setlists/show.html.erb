@@ -1,0 +1,30 @@
+<div class='container'>
+  <div class='row'>
+    <div class="col-sm-12 col-md-8 col-lg-5 px-5 px-sm-0 mx-auto">
+      <div class="card" style="width: 25rem;">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">artist：<%= @setlist.artist %></li>
+            <li class="list-group-item">event：<%= @setlist.event %></li>
+             <li class="list-group-item">date：<%= @setlist.date %></li>
+            <li class="list-group-item">venue：<%= @setlist.venue %></li>
+            <% @setlist.songs.each do |song| %>
+              <li class="list-group-item">song：<%= song.title %></li>
+            <% end %>
+  
+            
+            <%= link_to '', edit_setlist_path(@setlist), class: "btn btn-outline-dark far fa-edit" %>
+
+
+          </ul>
+          <!--% if @post.user == current_user %>-->
+          <!--<div class="card-body text-center">-->
+
+          <!--    %= link_to '', edit_post_path(@post), class: "btn btn-outline-dark far fa-edit" %>-->
+          <!--    %= link_to '', post_path(@post), method: :delete, "data-confirm" => "本当に消しますか?", class: "btn btn-outline-danger fas fa-trash-alt" %>-->
+
+          <!--</div>-->
+          <!--% end %>-->
+      </div>
+    </div>
+  </div>
+</div>

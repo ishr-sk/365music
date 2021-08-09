@@ -12,8 +12,8 @@ class DirectMessagesController < ApplicationController
       UserRoom.create(user_id: current_user.id, room_id: @room.id)
       UserRoom.create(user_id: @user.id, room_id: @room.id)
     end
-    @direct_messages = @room.direct_messages
-    @direct_message = DirectMessage.new(room_id: @room.id)
+      @direct_messages = @room.direct_messages
+      @direct_message = DirectMessage.new(room_id: @room.id)
   end
   
   def create
