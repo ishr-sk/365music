@@ -1,4 +1,7 @@
-<%= link_to 'セットリスト登録', new_setlist_path %>
+<% if user_signed_in? %>
+  <%= link_to 'セットリスト登録', new_setlist_path %>
+<% end %>
+
 <% @setlists.each do |setlist| %>
   <div>
     <%= link_to setlist_path(setlist.id) do %>

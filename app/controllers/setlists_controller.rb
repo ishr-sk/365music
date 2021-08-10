@@ -13,6 +13,7 @@ class SetlistsController < ApplicationController
   
   def show
     @setlist = Setlist.find(params[:id])
+    @setlists = Setlist.all
   end
   
   def index

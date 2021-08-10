@@ -7,15 +7,17 @@
             <li class="list-group-item">event：<%= @setlist.event %></li>
              <li class="list-group-item">date：<%= @setlist.date %></li>
             <li class="list-group-item">venue：<%= @setlist.venue %></li>
-            <% @setlist.songs.each do |song| %>
-              <li class="list-group-item">song：<%= song.title %></li>
-            <% end %>
+           
+      
   
             
             <%= link_to '', edit_setlist_path(@setlist), class: "btn btn-outline-dark far fa-edit" %>
 
 
           </ul>
+            <ol><% @setlist.songs.each do |song| %>
+              song：<%= song.title %>
+            <% end %></ol>
           <!--% if @post.user == current_user %>-->
           <!--<div class="card-body text-center">-->
 
