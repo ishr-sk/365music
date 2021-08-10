@@ -1,3 +1,3 @@
 class Encore < ApplicationRecord
-  belongs_to :song
+  belongs_to :setlist
 end

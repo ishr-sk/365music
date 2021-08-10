@@ -7,17 +7,22 @@
             <li class="list-group-item">event：<%= @setlist.event %></li>
              <li class="list-group-item">date：<%= @setlist.date %></li>
             <li class="list-group-item">venue：<%= @setlist.venue %></li>
-           
-      
-  
-            
+            <h5>song</h5>
+            <!--配列の中身に番号を付番したい→with_index(1)で1から始まる数字を付けられる-->
+            <% @setlist.songs.each.with_index(1) do |song, index| %>
+              <li class="list-group-item"><%= index %>:<%= song.title %></li>
+            <% end %>
+            <h5>encore</h5>
+             <% @setlist.encores.each.with_index(1) do |encore, index| %>
+              <li class="list-group-item">Encore<%= index %>:<%= encore.title %></li>
+            <% end %>
+          
+
+
             <%= link_to '', edit_setlist_path(@setlist), class: "btn btn-outline-dark far fa-edit" %>
 
 
           </ul>
-            <ol><% @setlist.songs.each do |song| %>
-              song：<%= song.title %>
-            <% end %></ol>
           <!--% if @post.user == current_user %>-->
           <!--<div class="card-body text-center">-->
 

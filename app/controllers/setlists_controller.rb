@@ -2,7 +2,7 @@ class SetlistsController < ApplicationController
   def new
     @setlist = Setlist.new
     @song = @setlist.songs.build
-    @encore = @song.encores.build
+    @encore = @setlist.encores.build
   end
 
   def create
@@ -10,20 +10,20 @@ class SetlistsController < ApplicationController
     @setlist.save
     redirect_to setlists_path
   end
-  
+
   def show
     @setlist = Setlist.find(params[:id])
     @setlists = Setlist.all
   end
-  
+
   def index
     @setlists = Setlist.all
   end
-  
+
   def edit
     @setlist = Setlist.find(params[:id])
   end
-  
+
   def update
     @setlist = Setlist.find(params[:id])
     @setlist.update(setlist_params)
@@ -32,8 +32,8 @@ class SetlistsController < ApplicationController
 
 
   private
-  
+
   def setlist_params
-    params.require(:setlist).permit(:artist, :date, :event, :venue, songs_attributes: [:id, :title, :_destroy, encores_attributes: [:id, :title, :_destroy]])
+    params.require(:setlist).permit(:artist, :date, :event, :venue, songs_attributes: [:id, :title, :_destroy], encores_attributes: [:id, :title, :_destroy])
   end
 end

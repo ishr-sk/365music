@@ -4,13 +4,4 @@
     <%= f.text_field :title, placeholder: "曲名を入力してください" %>
     <%= link_to_remove_association "remove song", f %>
   </div>
-  
-  <div class="form-group">
-    <div class="encore">
-      <%= f.fields_for :encores do |u| %>
-          <%= render "encore_fields", f: u %>
-      <% end %>
-      <%= link_to_add_association "encoreを追加", f, :encores %>
-    </div>
-  </div>
 </div>

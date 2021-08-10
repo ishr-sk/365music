@@ -17,10 +17,20 @@
     </div>
     <div class="form-group">
       <div class="parents">
+        <%= link_to_add_association "songを追加", s, :songs, data: { association_insertion_method: 'append' } %>
           <%= s.fields_for :songs do |t| %>
               <%= render "song_fields", f: t %>
           <% end %>
-          <%= link_to_add_association "songを追加", s, :songs %>
+          
+      </div>
+    </div>
+        <div class="form-group">
+      <div class="parents">
+        <%= link_to_add_association "encoreを追加", s, :encores, data: { association_insertion_method: 'append' } %>
+          <%= s.fields_for :encores do |u| %>
+              <%= render "encore_fields", f: u %>
+          <% end %>
+          
       </div>
     </div>
     <div class="actions">
