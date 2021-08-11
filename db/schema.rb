@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_08_10_144345) do
+ActiveRecord::Schema.define(version: 2021_08_11_043326) do
 
   create_table "direct_messages", force: :cascade do |t|
     t.integer "user_id"
@@ -93,6 +93,16 @@ ActiveRecord::Schema.define(version: 2021_08_10_144345) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_rooms_on_user_id"
+  end
+
+  create_table "schedules", force: :cascade do |t|
+    t.integer "user_id"
+    t.string "title"
+    t.text "body"
+    t.datetime "start_date"
+    t.datetime "end_date"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "setlists", force: :cascade do |t|

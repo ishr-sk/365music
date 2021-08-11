@@ -13,10 +13,16 @@ Rails.application.routes.draw do
     get 'followings', on: :member
     get 'followers', on: :member
   end
-  
+
+  # DM機能
   get 'direct_message/:id' => 'direct_messages#show', as: 'direct_message'
   resources :direct_messages, only: [:create]
-  
+
+  # セットリスト機能
   resources :setlists, only: [:new, :create, :index, :show, :edit, :update]
+
+  # スケジュール機能
+  resources :schedules, only: [:new, :create, :index, :show, :edit, :update, :destroy]
+  get 'my_calendar', to: 'schedules#my_calendar'
 
 end

@@ -12,6 +12,7 @@
  *
  *= require_tree .
  *= require_self
+ *= require fullcalendar
  */
  @import "bootstrap";
  @import 'font-awesome-sprockets';
@@ -148,7 +149,7 @@ $color-5: #da0080;
 /*   align-items: center; */
 }
 .says p{
-  margin:8px 0 0 !important; 
+  margin:8px 0 0 !important;
 }
 .says p:first-child{
   margin-top:0 !important;
@@ -166,4 +167,10 @@ $color-5: #da0080;
 .balloon_r .says:after {
   right: -26px;
   border-left: 22px solid #C4DFE6;
+}
+
+// スケジュール機能の日時の部分
+.datetime-form {
+  display: inline-block;
+  width: auto;
 }
