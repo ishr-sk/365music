@@ -11,7 +11,8 @@ class PostsController < ApplicationController
   end
   
   def index
-    @posts = Post.all
+    # フォローしているユーザーと自分の投稿を
+    @posts = Post.where(user_id: [current_user.id, *current_user.following_ids]).order("created_at DESC").page(params[:page]).per(9)
   end
   
   def show
