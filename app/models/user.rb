@@ -27,4 +27,20 @@ class User < ApplicationRecord
   has_many :entries, dependent: :destroy
 
   has_many :schedules, dependent: :destroy
+
+  # ================ 検索機能 ================
+  def self.search(search, word)
+    if search == "perfect_match"
+      @user = User.where("name LIKE? OR artist LIKE? OR introduction LIKE?", "#{word}", "#{word}", "#{word}")
+    elsif search == "forward_match"
+      @user = User.where("name LIKE? OR artist LIKE? OR introduction LIKE?", "#{word}%", "#{word}%", "#{word}%")
+    elsif search == "backward_match"
+      @user = User.where("name LIKE? OR artist LIKE? OR introduction LIKE?", "%#{word}", "%#{word}", "%#{word}")
+    elsif search == "partial_march"
+      @user = User.where("name LIKE? OR artist LIKE? OR introduction LIKE?", "%#{word}%", "%#{word}%", "%#{word}%")
+    else
+      @user = User.all
+    end
+  end
+  # ================ 検索機能 ================
 end

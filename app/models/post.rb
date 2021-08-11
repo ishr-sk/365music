@@ -31,4 +31,20 @@ class Post < ApplicationRecord
       post.hashtags << tag
     end
   end
+
+  # ================ 検索機能 ================
+  def self.search(search, word)
+    if search == "perfect_match"
+      @post = Post.where("title LIKE? OR artist LIKE? OR event LIKE? OR body LIKE?", "#{word}", "#{word}", "#{word}", "#{word}")
+    elsif search == "forward_match"
+      @post = Post.where("title LIKE? OR artist LIKE? OR event LIKE? OR body LIKE?", "#{word}%", "#{word}%", "#{word}%", "#{word}%")
+    elsif search == "backward_match"
+      @post = Post.where("title LIKE? OR artist LIKE? OR event LIKE? OR body LIKE?", "%#{word}", "%#{word}", "%#{word}", "%#{word}")
+    elsif search == "partial_march"
+      @post = Post.where("title LIKE? OR artist LIKE? OR event LIKE? OR body LIKE?", "%#{word}%", "%#{word}%", "%#{word}%", "%#{word}%")
+    else
+      @post = Post.all
+    end
+  end
+  # ================ 検索機能 ================
 end
