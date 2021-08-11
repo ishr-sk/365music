@@ -20,5 +20,4 @@ class SchedulesControllerTest < ActionDispatch::IntegrationTest
     get schedules_my_calendar_url
     assert_response :success
   end
-
 end

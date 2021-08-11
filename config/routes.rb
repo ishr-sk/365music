@@ -24,5 +24,4 @@ Rails.application.routes.draw do
   # スケジュール機能
   resources :schedules, only: [:new, :create, :index, :show, :edit, :update, :destroy]
   get 'my_calendar', to: 'schedules#my_calendar'
-
 end

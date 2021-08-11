@@ -30,7 +30,6 @@ class SetlistsController < ApplicationController
     redirect_to setlist_path(@setlist)
   end
 
-
   private
 
   def setlist_params
