@@ -14,6 +14,11 @@ Rails.application.routes.draw do
     get 'followers', on: :member
   end
 
+  # 退会処理
+  get '/users/:id/unsubscribe' => 'users#unsubscribe', as: 'unsubscribe'
+  patch '/users/:id/withdraw' => 'users#withdraw', as: 'withdraw'
+  # put 'user/withdraw' => 'users#withdraw'
+
   # DM機能
   get 'direct_message/:id' => 'direct_messages#show', as: 'direct_message'
   resources :direct_messages, only: [:create]

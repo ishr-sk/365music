@@ -43,4 +43,9 @@ class User < ApplicationRecord
     end
   end
   # ================ 検索機能 ================
+
+  # userのis_deletedがfalseならtrueを返す
+  def active_for_authentication?
+    super && (self.is_deleted == false)
+  end
 end

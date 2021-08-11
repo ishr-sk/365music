@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_08_11_043326) do
+ActiveRecord::Schema.define(version: 2021_08_11_134900) do
 
   create_table "direct_messages", force: :cascade do |t|
     t.integer "user_id"
@@ -130,7 +130,7 @@ ActiveRecord::Schema.define(version: 2021_08_11_043326) do
     t.datetime "remember_created_at"
     t.string "name"
     t.string "profile_image_id"
-    t.boolean "is_deleted"
+    t.boolean "is_deleted", default: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "introduction"
