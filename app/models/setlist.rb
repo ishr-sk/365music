@@ -1,4 +1,6 @@
 class Setlist < ApplicationRecord
+  # optional: true付与でrollback解決
+  belongs_to :user, optional: true
   has_many :songs, inverse_of: :setlist
   has_many :encores, inverse_of: :setlist
   accepts_nested_attributes_for :songs, reject_if: :all_blank, allow_destroy: true

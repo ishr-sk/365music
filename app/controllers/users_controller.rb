@@ -4,7 +4,7 @@ class UsersController < ApplicationController
   end
 
   def index
-      @users = User.where(is_deleted: false)
+    @users = User.where(is_deleted: false)
   end
 
   def edit
