@@ -17,9 +17,10 @@
               <li class="list-group-item">Encore<%= index %>:<%= encore.title %></li>
             <% end %>
           
-
-
-            <%= link_to '', edit_setlist_path(@setlist), class: "btn btn-outline-dark far fa-edit" %>
+            <!--会員のみ編集できる-->
+            <% if user_signed_in? %>
+              <%= link_to '', edit_setlist_path(@setlist), class: "btn btn-outline-dark far fa-edit" %>
+            <% end %>
 
 
           </ul>
