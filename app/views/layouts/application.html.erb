@@ -29,6 +29,9 @@
       <li>
         <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
       </li>
+      <li>
+        <%= link_to 'お問い合わせ', new_contact_path %>
+      </li>
       <!--検索機能をログインしている場合全ての画面に表示する-->
               <% if user_signed_in? %>
                 <!--検索フォーム-->
@@ -48,6 +51,9 @@
       </li>
       <li>
         <%= link_to 'setlist', setlists_path %>
+      </li>
+      <li>
+        <%= link_to 'お問い合わせ', new_contact_path %>
       </li>
     <% end %>
     
