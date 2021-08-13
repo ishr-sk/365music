@@ -32,4 +32,10 @@ Rails.application.routes.draw do
 
   # 検索機能
   get 'search' => 'searches#search'
+  
+  # 問い合わせ機能
+  resources :contacts, only: [:new, :create]
+  post 'contacts/confirm', to: 'contacts#confirm', as: 'confirm'
+  post 'contacts/back', to: 'contacts#back', as: 'back'
+  get 'thanks', to: 'contacts#thanks', as: 'thanks'
 end

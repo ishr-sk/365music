@@ -72,3 +72,4 @@ gem 'cocoon'
 gem 'fullcalendar-rails'
 gem 'momentjs-rails'
 gem 'rubocop-airbnb'
+gem "dotenv-rails"
