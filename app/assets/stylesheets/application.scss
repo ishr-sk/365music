@@ -196,6 +196,11 @@ $color-5: #da0080;
   a:hover { color: #0bd; }
 }
 
-.no-underline{
-  text-decoration:none !important;
+// リンクの下線を消す
+.no-underline {
+  text-decoration: none !important;
+}
+
+.img-logo {
+  width: 120px;
 }

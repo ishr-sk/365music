@@ -1,0 +1,28 @@
+ <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="/"><%= image_tag "logo_transparent.png", class: "img-logo" %></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav ml-auto">
+   <% if user_signed_in? %>
+        <li class="button"><%= link_to 'my page', user_path(current_user.id) %></li>
+        <li class="button"><%= link_to '365', posts_path %></li>
+        <li class="button"><%= link_to 'users', users_path %></li>
+        <li class="button"><%= link_to 'setlist', setlists_path %></li>
+        <li class="button"><%= link_to 'new 365', new_post_path %></li>
+        <li class="button"><%= link_to "logout", destroy_user_session_path, method: :delete %></li>
+        <li class="button"><%= link_to 'contact', new_contact_path %></li>
+    <% else %>
+        <li class="button"><%= link_to "signup", new_user_registration_path %></li>
+        <li class="button"><%= link_to "login", new_user_session_path %></li>
+        <li class="button"><%= link_to 'setlist', setlists_path %></li>
+        <li class="button"><%= link_to 'contact', new_contact_path %></li>
+    <% end %>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header

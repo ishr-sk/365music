@@ -4,35 +4,16 @@
     <title>365Music</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
-  <% if user_signed_in? %>
-      <li>
-        <%= link_to 'my page', user_path(current_user.id) %>
-      </li>
-      <li>
-        <%= link_to '365', posts_path %>
-      </li>
-      <li>
-        <%= link_to 'users', users_path %>
-      </li>
-      <li>
-        <%= link_to 'setlist', setlists_path %>
-      </li>
-      <li>
-        <%= link_to '投稿フォーム', new_post_path %>
-      </li>
-      <li>
-        <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
-      </li>
-      <li>
-        <%= link_to 'お問い合わせ', new_contact_path %>
-      </li>
-      <!--検索機能をログインしている場合全ての画面に表示する-->
+  <body class="d-flex flex-column vh-100">
+<%= render 'layouts/header' %>
+<main>
+          <!--検索機能をログインしている場合全ての画面に表示する-->
               <% if user_signed_in? %>
                 <!--検索フォーム-->
                 <%= form_tag(search_path, method: :get) do %>
@@ -42,22 +23,7 @@
                   <%= submit_tag "検索" %>
                 <% end %>
               <% end %>
-    <% else %>
-      <li>
-        <%= link_to "新規登録", new_user_registration_path %>
-      </li>
-      <li>
-        <%= link_to "ログイン", new_user_session_path %>
-      </li>
-      <li>
-        <%= link_to 'setlist', setlists_path %>
-      </li>
-      <li>
-        <%= link_to 'お問い合わせ', new_contact_path %>
-      </li>
-    <% end %>
-    
-    
+    </main>
     <%= yield %>
   </body>
 </html>
