@@ -245,3 +245,19 @@ $color-5: #da0080;
   font-family: 'Raleway', sans-serif;
 }
 
+.about-title {
+  font-family: 'Homemade Apple', cursive;
+  text-align: center;
+}
+
+// フッター
+footer {
+  background: #242E43;
+  text-align: center;
+  padding: 26px 0;
+}
+
+footer p {
+  color: #fff;
+  font-size: 0.875rem;
+}
