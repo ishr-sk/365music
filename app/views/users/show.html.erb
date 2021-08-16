@@ -11,12 +11,23 @@
 <aside>
   <h3 class="sub-title">menu</h3>
   <ul class="sub-menu">
+    <li><%= link_to 'new 365', new_post_path, class: "no-underline" %></li></li>
     <li><%= link_to 'my page', user_path(current_user.id), class: "no-underline" %></li>
     <li><%= link_to '365', posts_path, class: "no-underline" %></li>
     <!--turbolinksを無効化する→'data-turbolinks': false-->
     <li><%= link_to 'schedule', my_calendar_path,'data-turbolinks': false, class: "no-underline" %></li>
   </ul>
 </aside>
+          <!--検索機能をログインしている場合全ての画面に表示する-->
+              <% if user_signed_in? %>
+                <!--検索フォーム-->
+                <%= form_tag(search_path, method: :get) do %>
+                  <%= text_field_tag (:word) %>
+                  <%= select_tag 'category', options_for_select([['---選択してください---', ''],['User', '1'], ['Post', '2'], ['Setlist', '3']]) %>
+                  <%= select_tag 'search', options_for_select([["完全一致", "perfect_match"], ["前方一致", "forward_match"], ["後方一致", "backward_match"], ["部分一致", "partial_march"]]) %>
+                  <%= submit_tag "検索" %>
+                <% end %>
+              <% end %>
 </dev>
 
 <dev class="col-8">

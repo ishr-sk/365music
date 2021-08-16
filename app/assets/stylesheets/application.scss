@@ -19,6 +19,9 @@
  @import 'font-awesome';
 
 @import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 
   div {
     font-family: 'M PLUS Rounded 1c', sans-serif;
@@ -202,5 +205,43 @@ $color-5: #da0080;
 }
 
 .img-logo {
-  width: 120px;
+  width: 100px;
 }
+
+// home
+.home-content {
+  color: white;
+  text-align: center;
+  margin-top: 10%;
+}
+.home-content p {
+  font-size: 1.125rem;
+  font-family: 'Noto Serif JP', serif;
+  margin: 10px 0 42px;
+}
+// home 見出し
+.page-title {
+  font-size: 5rem;
+  font-family: 'Homemade Apple', cursive;
+  text-transform: uppercace;
+  font-weight: normal;
+}
+// 大きい背景画像
+.big-bg {
+  background-size: cover;
+  background-position: center center;
+}
+#home {
+  background-image: url(main-bg.jpg);
+  // background-color: #0bd;
+  // background-blend-mode: hard-light;
+  min-height: 100vh;
+}
+#home .page-title {
+  text-transform: none;
+}
+
+.button {
+  font-family: 'Raleway', sans-serif;
+}
+

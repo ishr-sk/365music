@@ -1,3 +1,11 @@
-<div class="container">
-  <h1>365music</h1>
+<div id="home" class="big-bg">
+  <%= render 'layouts/header' %>
+  <div class="home-content wrapper">
+    <h2 class="page-title">No Music No Life</h2>
+    <p>365日、音楽と共に。</p>
+    <!--ログインしていない人のみ表示-->
+    <% unless user_signed_in? %>
+      <%= link_to "start", new_user_session_path, class: "btn btn-outline-dark btn-sm" %>
+    <% end %>
+  </div>
 </div>
