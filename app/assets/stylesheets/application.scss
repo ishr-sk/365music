@@ -241,12 +241,13 @@ $color-5: #da0080;
   text-transform: none;
 }
 
+// ヘッダーフォント
 .button {
   font-family: 'Raleway', sans-serif;
 }
 
 .about-title {
-  font-family: 'Homemade Apple', cursive;
+  font-family: 'Raleway', sans-serif;
   text-align: center;
 }
 
@@ -260,4 +261,21 @@ footer {
 footer p {
   color: #fff;
   font-size: 0.875rem;
+}
+
+.about-content h2 {
+  font-family: 'Homemade Apple', cursive;
+}
+.about-content p {
+  font-size: 0.775rem;
+  font-family: 'Noto Serif JP', serif;
+}
+
+.img-about {
+    width: 80%;
+    height: auto;
+    border-radius: 5px;
+}
+.about-content {
+  margin: 0 auto;
 }
