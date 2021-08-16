@@ -21,23 +21,3 @@
 //= require activestorage
 //= require turbolinks
 //= require_tree .
-/* 
-  Description: Animates the header upon scroll
-  
-*/
-/*global $*/
-$(function(){
-  var header = $("header"),
-      yOffset = 0,
-      triggerPoint = 150;
-  $(window).scroll(function(){
-    yOffset = $(window).scrollTop();
-    
-    if(yOffset >= triggerPoint){
-      header.addClass("minimized");
-    }else{
-      header.removeClass("minimized");
-    }
-    
-  });
-});
