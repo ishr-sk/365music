@@ -1,0 +1,14 @@
+<!--検索機能をログインしている場合全ての画面に表示する-->
+<% if user_signed_in? %>
+<!--検索フォーム-->
+<div class="form-inline">
+  <%= form_tag(search_path, method: :get) do %>
+      <%= text_field_tag (:word), '', class: "form-control form-control-sm mr-sm-2" %>
+      <%= select_tag 'category', options_for_select([['User', '1'], ['Post', '2'], ['Setlist', '3']]), class: "form-control form-control-sm mr-sm-2" %>
+      <%= select_tag 'search', options_for_select([["完全一致", "perfect_match"], ["前方一致", "forward_match"], ["後方一致", "backward_match"], ["部分一致", "partial_march"]]), class: "form-control form-control-sm mr-sm-2" %>
+      <%= button_tag(type: "submit", class: "btn btn-link btn-sm search-btn") do %>
+        <i class="fas fa-search"></i>
+      <% end %>
+  <% end %>
+ </div>
+<% end %>
