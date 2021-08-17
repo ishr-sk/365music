@@ -6,11 +6,11 @@ class SearchesController < ApplicationController
     word = params[:word]
 
     if @category == "3"
-      @setlist = Setlist.search(search, word)
+      @setlist = Setlist.search(search, word).order("created_at DESC").page(params[:page]).per(10)
     elsif @category == "2"
-      @post = Post.search(search, word)
+      @post = Post.search(search, word).order("created_at DESC").page(params[:page]).per(9)
     else 
-      @user = User.search(search, word)
+      @user = User.search(search, word).page(params[:page]).per(10)
     end
   end
 end

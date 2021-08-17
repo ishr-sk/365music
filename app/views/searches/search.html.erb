@@ -2,25 +2,17 @@
   <%= render 'layouts/header' %>
 </div>
 
-<h1>search for "<%= params[:word] %>"</h1>
+<div class="container">
+  <h1>search for "<%= params[:word] %>"</h1>
+  <div class="row row-cols-1 row-cols-md-3 g-4">
     <% if @category == '2' %>
-        <% @post.each do |post| %>
-          <%= link_to post_path(post.id) do %>
-            <%= attachment_image_tag post, :image, fallback: "noimage.jpg", class: "card-img-top" %>
-          <% end %>
-        <% end %>
+      <%= render 'index-post', post: @post %>
     <% end %>
     <% if @category == '1' %>
-          <% @user.each do |user| %>
-            <%= link_to user_path(user.id) do %>
-              <b><i class="fas fa-at"><%= user.name %></i></b>
-            <% end %>
-          <% end %>
+      <%= render 'index-user', user: @user %>
     <% end %>
     <% if @category == '3' %>
-          <% @setlist.each do |setlist| %>
-            <%= link_to setlist_path(setlist.id) do %>
-              artist：<%= setlist.artist %>
-            <% end %>
-          <% end %>
+      <%= render 'index-setlist', setlist: @setlist %>
     <% end %>
+  </div>
+</div>

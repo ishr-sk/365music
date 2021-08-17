@@ -1,0 +1,10 @@
+<% setlist.each do |setlist| %>
+  <div>
+    <%= link_to setlist_path(setlist.id) do %>
+         artist：<%= setlist.artist %>
+    <% end %>
+         event：<%= setlist.event %>
+         venue：<%= setlist.venue %>
+  </div>
+<% end %>
+<%= paginate setlist %>

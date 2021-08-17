@@ -1,0 +1,27 @@
+<% post.each do |post| %>
+  <div class="card h-100">
+    <div class="card-header bg-transparent">
+      <%= link_to user_path(post.user.id) do %>
+        <%= attachment_image_tag post.user, :profile_image, :fill, 45, 45, fallback: "noimage.jpg", class: "mr-3 align-self-start rounded-circle" %>
+      <% end %>
+      <b><%= post.user.name %></b>
+    </div>
+    <%= link_to post_path(post.id) do %>
+      <%= attachment_image_tag post, :image, fallback: "noimage.jpg", class: "card-img-top" %>
+    <% end %>
+    <div class="card-body">
+      <p class="card-title">
+        <b><i class="fas fa-at"><%= post.user.name %></i></b>
+        <span id="likes-<%= post.id %>"><%= render "likes/like-btn", post: post %></span>
+        <i class="far fa-comments"> <%= post.post_comments.count %></i>
+      </p>
+      <p class="card-text">
+        <%= render_with_hashtags(post.body) %></br>
+      </p>
+    </div>
+    <div class="card-footer text-right">
+      <small class="text-muted"><%= time_ago_in_words(post.created_at) %></small>  
+    </div>
+  </div>
+<% end %>
+<%= paginate post %>
