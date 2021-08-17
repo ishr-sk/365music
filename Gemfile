@@ -73,3 +73,6 @@ gem 'fullcalendar-rails'
 gem 'momentjs-rails'
 gem 'rubocop-airbnb'
 gem "dotenv-rails"
+group :production do
+  gem 'mysql2'
+end
