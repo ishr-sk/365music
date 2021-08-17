@@ -1,3 +1,5 @@
-// Place all the styles related to the Schedules controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+#schedule-header {
+  background-image: image-url("schedule-header.jpg");
+  height: 170px;
+  margin-bottom: 40px;
+}
