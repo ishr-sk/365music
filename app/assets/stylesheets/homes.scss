@@ -23,6 +23,7 @@
 #home {
   background-image: image-url("main-bg.jpg");
   min-height: 100vh;
+  filter: grayscale(20%);
 }
 #home .page-title {
   text-transform: none;

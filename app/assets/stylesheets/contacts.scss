@@ -1,6 +1,7 @@
 #contact {
   background-image: image-url("contact-bg.jpg");
   min-height: 100vh;
+  filter: grayscale(50%);
 }
 
 .form-control {
