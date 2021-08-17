@@ -10,14 +10,11 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-<body class="d-flex flex-column vh-100">
-  
-
-
-<main>
-
+  <body class="d-flex flex-column vh-100">
+    <main>
+      <%= yield %>
     </main>
-    <%= yield %>
+      
     <%= render 'layouts/footer' %>
   </body>
 </html>

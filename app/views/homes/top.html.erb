@@ -5,12 +5,11 @@
     <p>365日、音楽と共に。</p>
     <!--ログインしていない人のみ表示-->
     <% unless user_signed_in? %>
-      <%= link_to "start", new_user_session_path, class: "btn btn-outline-dark btn-sm" %>
+      <%= link_to "start", new_user_session_path, class: "home-button no-underline" %>
     <% end %>
   </div>
 </div>
 
-<div class="about">
   <div class="about-title mt-5">
     <p>about</p>
   </div>
@@ -29,8 +28,7 @@
             その思いを共有して、音楽好きさんとの輪を広げてみましょう。
           </p>
       </div>
-    </div>
-    <div class="container mt-5">
+   
       <div class="row">
         <div class="col-md-8">
           <h2>365music</h2>
@@ -44,8 +42,7 @@
         <div class="col-md-4">
           <%= image_tag "about2.jpg", class: "img-about" %>
       </div>
-    </div>
-    <div class="container mb-5  mt-5">
+      
       <div class="row">
         <div class="col-md-4">
           <%= image_tag "about3.jpg", class: "img-about" %>
@@ -58,7 +55,7 @@
             音楽を聴いてどんなことを思いましたか。</br>
             その思いを共有して、音楽好きさんとの輪を広げてみましょう。
           </p>
+        </div>
       </div>
     </div>
   </div>
-</div>

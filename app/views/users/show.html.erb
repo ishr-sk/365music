@@ -38,10 +38,10 @@
 	    <small class="text-dark">favorite artist<i class="fas fa-headphones-alt"></i><%= @user.artist %></small></br>
       <i><%= @user.introduction %></i></br>
       <small class="text-dark">
-        <%= link_to followings_user_path(@user.id) do %>
+        <%= link_to followings_user_path(@user.id), class: "no-underline" do %>
           <%= @user.followings.count %> フォロー中
         <% end %>｜
-        <%= link_to followers_user_path(@user.id) do %>
+        <%= link_to followers_user_path(@user.id), class: "no-underline" do %>
           <%= @user.followers.count %> フォロワー
         <% end %>
       </small></br>
@@ -72,7 +72,7 @@
           <% end %>
           <div class="card-body">
             <p class="card-title">
-              <b><i class="fas fa-at"><%= post.user.name %></i></b>
+              <b>＠<%= post.user.name %></b>
               <span id="likes-<%= post.id %>"><%= render "likes/like-btn", post: post %></span>
               <i class="far fa-comments"> <%= post.post_comments.count %></i>
             </p>
