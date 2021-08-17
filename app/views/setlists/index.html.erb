@@ -1,3 +1,7 @@
+<div id="setlist-header" class="big-bg">
+  <%= render 'layouts/header' %>
+</div>
+
 <% if user_signed_in? %>
   <%= link_to 'セットリスト登録', new_setlist_path %>
 <% end %>

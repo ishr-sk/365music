@@ -1,3 +1,7 @@
+<div id="setlist-header" class="big-bg">
+  <%= render 'layouts/header' %>
+</div>
+
 <div class='container'>
   <div class='row'>
     <div class="col-sm-12 col-md-8 col-lg-5 px-5 px-sm-0 mx-auto">
@@ -16,7 +20,7 @@
              <% @setlist.encores.each.with_index(1) do |encore, index| %>
               <li class="list-group-item">Encore<%= index %>:<%= encore.title %></li>
             <% end %>
-          
+
             <!--会員のみ編集できる-->
             <% if user_signed_in? %>
               <%= link_to '', edit_setlist_path(@setlist), class: "btn btn-outline-dark far fa-edit" %>
