@@ -1,3 +1,67 @@
-// Place all the styles related to the homes controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.home-content {
+  color: white;
+  text-align: center;
+  margin-top: 10%;
+}
+.home-content p {
+  font-size: 1.125rem;
+  font-family: 'Noto Serif JP', serif;
+  margin: 10px 0 42px;
+}
+// home 見出し
+.page-title {
+  font-size: 5rem;
+  font-family: 'Homemade Apple', cursive;
+  text-transform: uppercace;
+  font-weight: normal;
+}
+// 大きい背景画像
+.big-bg {
+  background-size: cover;
+  background-position: center center;
+}
+#home {
+  background-image: image-url("main-bg.jpg");
+  min-height: 100vh;
+}
+#home .page-title {
+  text-transform: none;
+}
+
+.home-button {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.375rem;
+  background: #82aaaa;
+  color: #fff;
+  border-radius: 5px;
+  padding: 18px 32px;
+}
+
+.home-button:hover {
+  background: #b3d0d7;
+  color: #dddddd;
+}
+
+.about-title p {
+  font-family: 'Raleway', sans-serif;
+  text-align: center;
+  font-weight: 700;
+  color: #888888;
+}
+
+.about-content h2 {
+  font-family: 'Homemade Apple', cursive;
+}
+.about-content p {
+  font-size: 0.775rem;
+  font-family: 'Noto Serif JP', serif;
+}
+
+.img-about {
+    width: 80%;
+    height: auto;
+    border-radius: 5px;
+}
+.about-content {
+  margin: 0 auto;
+}
