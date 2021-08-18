@@ -14,10 +14,31 @@
 //= require popper
 //= require bootstrap-sprockets
 //= require cocoon
-//= require moment 
+//= require moment
 //= require fullcalendar
 
 //= require rails-ujs
 //= require activestorage
 //= require turbolinks
 //= require_tree .
+/*global $*/
+/*global ScrollReveal*/
+$(function () {
+  ScrollReveal().reveal('.left', { 
+    duration: 1600, 
+    origin: 'left', 
+    distance: '50px',
+    viewFactor: 0.4,
+    reset: true   
+  });
+});
+
+$(function () {
+  ScrollReveal().reveal('.right', { 
+    duration: 1600, 
+    origin: 'right', 
+    distance: '50px',
+    viewFactor: 0.4,
+    reset: true   
+  });
+});

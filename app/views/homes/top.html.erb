@@ -17,10 +17,10 @@
     <div class="container mb-5">
       <div class="row">
         <div class="col-md-4">
-          <%= image_tag asset_path("about1.jpg"), class: "img-about" %>
+          <%= image_tag asset_path("about1.jpg"), class: "img-about left" %>
         </div>
         <div class="col-md-8">
-          <h2>365music</h2>
+          <h2>post</h2>
           <p>音楽に関わるちょっとした日常の呟きを自由に投稿しましょう。</br>
             嬉しかった時や勇気づけられた時、落ち込んでしまった時。</br>
             特になんでもない普通の日。</br>
@@ -28,10 +28,25 @@
             その思いを共有して、音楽好きさんとの輪を広げてみましょう。
           </p>
       </div>
-   
-      <div class="row">
+      <div class="container-about">
+        <div class="about-item">
+          <%= image_tag asset_path("about-heat.png"), class: "about-heat" %>
+          <p>postにいいねを押してみよう</p></br>
+          <small>気になったpostがあったら</br>気軽にいいねを押してみましょう。</small>
+        </div>
+        <div class="about-item">
+          <%= image_tag asset_path("about-user.png"), class: "about-user" %>
+          <p>気になったuserをフォロー</p>
+        </div>
+        <div class="about-item">
+          <%= image_tag asset_path("about-come.png"), class: "about-come" %>
+          <p>メッセージを送ってみよう</p>
+        </div>
+      </div>
+      </div>
+      <div class="row mt-5">
         <div class="col-md-8">
-          <h2>365music</h2>
+          <h2>schedule</h2>
           <p>音楽に関わるちょっとした日常の呟きを自由に投稿しましょう。</br>
             嬉しかった時や勇気づけられた時、落ち込んでしまった時。</br>
             特になんでもない普通の日。</br>
@@ -40,12 +55,11 @@
           </p>
         </div>
         <div class="col-md-4">
-          <%= image_tag asset_path("about2.jpg"), class: "img-about" %>
+          <%= image_tag asset_path("about2.jpg"), class: "img-about right" %>
       </div>
-      
-      <div class="row">
+      <div class="row mt-5">
         <div class="col-md-4">
-          <%= image_tag asset_path("about3.jpg"), class: "img-about" %>
+          <%= image_tag asset_path("about3.jpg"), class: "img-about left" %>
         </div>
         <div class="col-md-8">
           <h2>setlist</h2>
