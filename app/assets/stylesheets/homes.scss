@@ -56,12 +56,14 @@
 .about-content p {
   font-size: 0.775rem;
   font-family: 'Noto Serif JP', serif;
+  line-height: 2.0;
 }
 
-.img-about {
-    width: 80%;
+img.img-about {
+    width: 40%;
     height: auto;
-    border-radius: 5px;
+    border-radius: 10px;
+    filter: grayscale(20%);
 }
 .about-content {
   margin: 0 auto;
@@ -127,3 +129,11 @@
   bottom: 0;
   right: 0;
 }
+
+.about-content {
+  display: flex;/* flexbox */
+  justify-content: center; /* 水平方向 */
+  align-items: center; /* 垂直方向 */
+  margin: 80px 0;
+}
+  
