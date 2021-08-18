@@ -17,7 +17,7 @@
  @import "bootstrap";
  @import 'font-awesome-sprockets';
  @import 'font-awesome';
- 
+
  @import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@500&display=swap');
  @import url('https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap');
  @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200&display=swap');
@@ -224,4 +224,19 @@ footer {
 footer p {
   color: #fff;
   font-size: 0.875rem;
+}
+
+// スクロールバー
+::-webkit-scrollbar {
+  width: 12px;
+}
+// スクロールバーの背景
+::-webkit-scrollbar-track {
+  background: #b3d0d7;
+  border-radius: 10px;
+}
+// 動かす部分の指定
+::-webkit-scrollbar-thumb {
+  background: #82aaaa;
+  border-radius: 10px;
 }
