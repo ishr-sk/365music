@@ -23,22 +23,22 @@
 //= require_tree .
 /*global $*/
 /*global ScrollReveal*/
-$(function () {
-  ScrollReveal().reveal('.left', { 
-    duration: 1600, 
-    origin: 'left', 
+$(document).on('turbolinks:load', function () {
+  ScrollReveal().reveal('.left', {
+    duration: 1600,
+    origin: 'left',
     distance: '50px',
     viewFactor: 0.4,
-    reset: true   
+    reset: true
   });
 });
 
-$(function () {
-  ScrollReveal().reveal('.right', { 
-    duration: 1600, 
-    origin: 'right', 
+$(document).on('turbolinks:load', function () {
+  ScrollReveal().reveal('.right', {
+    duration: 1600,
+    origin: 'right',
     distance: '50px',
     viewFactor: 0.4,
-    reset: true   
+    reset: true
   });
 });
