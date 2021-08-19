@@ -228,12 +228,13 @@ footer p {
 
 // スクロールバー
 ::-webkit-scrollbar {
-  width: 12px;
+  width: 8px;
 }
 // スクロールバーの背景
 ::-webkit-scrollbar-track {
-  background: #b3d0d7;
+  // background: #b3d0d7;
   border-radius: 10px;
+  background: rgba(0,0,0,0.5);
 }
 // 動かす部分の指定
 ::-webkit-scrollbar-thumb {

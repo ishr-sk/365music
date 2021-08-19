@@ -24,6 +24,9 @@
       音楽を聴いてどんなことを思いましたか。</br>
       その思いを共有して、音楽好きさんとの輪を広げてみましょう。
     </p>
+    <div class="button12">
+      <%= link_to "view more", posts_path, class: "home-button no-underline" %>
+    </div>
   </span>
 </div>
 <div class="container-about">
@@ -51,6 +54,9 @@
       カレンダーを音楽にまつわるイベントで埋めてみるのも</br>
       一つの楽しみ方になるかもしれませんね。
     </p>
+    <div class="button12">
+      <%= link_to "view more", my_calendar_path, 'data-turbolinks': false, class: "home-button no-underline" %>
+    </div>
   </span>
   <%= image_tag asset_path("about2.jpg"), class: "img-about right ml-5 mt-5" %>
 </div>
@@ -64,6 +70,9 @@
       気になったセットリストも探して見ることもできます。</br>
       音楽ライフをより豊かに、より楽しくしていきましょう。
     </p>
+    <div class="button12">
+      <%= link_to "view more", setlists_path, class: "home-button no-underline" %>
+    </div>
   </span>
 </div>
 
