@@ -1,12 +1,9 @@
 <div id="contact" class="big-bg">
   <%= render 'layouts/header' %>
-    <div>
-      <%= flash[:error] %>
-    </div>
-    
     <div class="form-wrapper">
       <h2 class="devise-title">Log in</h2>
       <%= form_with model: @user, url: user_session_path, local: true do |f| %>
+      <%= flash[:error] %>
       <form>
         <div class="form-item">
           <%= f.label :email %><br />

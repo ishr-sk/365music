@@ -33,6 +33,11 @@ body {
   background: #f5f5f5;
 }
 
+a {
+  text-decoration: none;
+}
+
+
 // ボタンのレイアウト
 .reset {
   color: black;
@@ -108,10 +113,10 @@ $color-5: #da0080;
 
 // いいね機能のハートの色
 .heart_red {
-  color:#ff7f7f;
+  color:#ff6c94;
 }
 .heart_blue {
-  color:#4169e1;
+  color:#1760a0;
 }
 
 .box_btn {
@@ -247,9 +252,6 @@ footer p {
   border-radius: 10px;
 }
 
-
-
-
 // ログイン画面
 /* Simple Reset */
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -329,4 +331,23 @@ form {
 
 .form-footer a:hover {
   border-bottom: 1px dotted #8c8c8c;
+}
+
+.email-button-panel {
+  margin: 2em 0 0;
+  width: 100%;
+}
+
+.email-button-panel .button {
+  background: #b3d0d7;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  height: 50px;
+  font-size: 0.7em;
+  letter-spacing: 0.05em;
+  text-align: center;
+  text-transform: uppercase;
+  transition: background 0.3s ease-in-out;
+  width: 100%;
 }

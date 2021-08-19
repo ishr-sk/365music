@@ -6,7 +6,7 @@
       <%= render "devise/shared/error_messages", resource: resource %>
       <form>
         <div class="form-item">
-          <%= f.label :name %><br />
+          <%= f.label :name, "user name" %><br />
           <%= f.text_field :name, autofocus: true %>
         </div>
         <div class="form-item">
@@ -27,7 +27,7 @@
         <div class="button-panel">
           <%= f.submit "Sign up", class: "button" %>
         </div>
-        <% end %>
+      <% end %>
       </form>
       <div class="form-footer">
         <%= render "devise/shared/links" %>
