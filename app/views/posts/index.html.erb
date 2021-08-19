@@ -1,6 +1,9 @@
 <div id="posts-header" class="big-bg">
   <%= render 'layouts/header' %>
 </div>
+<div class="sub-title">
+  <span class="title">365</span>
+</div>
 
 <div class="container">
   <div class="row row-cols-1 row-cols-md-3 g-4">
@@ -26,7 +29,7 @@
             </p>
           </div>
           <div class="card-footer text-right">
-            <small class="text-muted"><%= time_ago_in_words(post.created_at) %></small>  
+            <small class="text-muted"><%= time_ago_in_words(post.created_at) %></small>
           </div>
         </div>
       <% end %>

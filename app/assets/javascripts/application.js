@@ -42,7 +42,3 @@ $(document).on('turbolinks:load', function () {
     reset: true
   });
 });
-
-//By @nodws
-//Feel free to use it on your project, paypal me a beer if you want :D pay@nodws.com
-//Image by unsplash.com
