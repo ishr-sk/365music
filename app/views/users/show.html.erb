@@ -3,59 +3,34 @@
 </div>
 
 <div class="container mb-5">
-  <div class="row justify-content-end">
-    <%= render 'searches/search-form' %>
-  </div>
-  <% if @user.id == current_user.id %>
-    <h4>my page</h4>
-  <% else %>
-    <h4>user info</h4>
-  <% end %>
-  <div class="row">
-    <dev class="col-3">
-      <aside>
-        <dev class="new-365">
-          <%= render 'posts/new-btn' %>
-        </dev>
-        <dev class="my-schedule">
-          <%= render 'posts/schedule-btn' %>
-        </dev>
-        <dev class="new-setlist">
-          <%= render 'posts/setlist-btn' %>
-        </dev>
-      </aside>
-    </dev>
-
-    <dev class="col-8">
-      <div class="media">
-        <%= attachment_image_tag @user, :profile_image, :fill, 100, 100, fallback: "noimage.jpg", class: "mr-3 align-self-start rounded-circle" %>
-          <div class="media-body">
-            <b>＠<%= @user.name %></b>
-      	    <small class="text-dark">favorite artist<i class="fas fa-headphones-alt"></i><%= @user.artist %></small></br>
-            <i><%= @user.introduction %></i></br>
-            <small class="text-dark">
-              <%= link_to followings_user_path(@user.id), class: "no-underline" do %>
-                <%= @user.followings.count %> フォロー中
-              <% end %>｜
-              <%= link_to followers_user_path(@user.id), class: "no-underline" do %>
-                <%= @user.followers.count %> フォロワー
-              <% end %>
-            </small></br>
-              <% if @user.id == current_user.id %>
-                <%= link_to "Edit", edit_user_path(@user), class: "btn btn-outline-dark btn-sm" %>
-              <% end %>
-              <!--DM機能ボタン実装（相互のみ表示される）-->
-              <% unless @user.id == current_user.id %>
-                <% if (current_user.followed_by? @user) && (@user.followed_by? current_user) %>
-                  <% if current_user != @user %>
-                    <%= link_to '', direct_message_path(@user.id), class: "btn far fa-envelope btn-lg" %>
-                  <% end %>
-                <% end %>
-              <% end %>
-          </div>
-      </div>
-     <%= render 'posts/index', posts: @posts %>
+    <div class="row justify-content-end">
+      <%= render 'searches/search-form' %>
     </div>
+    <% if @user.id == current_user.id %>
+      <h4>my page</h4>
+    <% else %>
+      <h4>user info</h4>
+    <% end %>
+  <div class="row">
+        <div class="col-3">
+          <aside>
+            <div class="new-365">
+              <%= render 'posts/new-btn' %>
+            </div>
+            <div class="my-schedule">
+              <%= render 'posts/schedule-btn' %>
+            </div>
+            <div class="new-setlist">
+              <%= render 'posts/setlist-btn' %>
+            </div>
+          </aside>
+        </div>
+<div class="col-8">
+ <%= render 'user-info', user: @user %>
+</div>
+        <div class="col-8">
+          <%= render 'posts/index', posts: @posts %>
+        </div>
   </div>
 </div>
 
