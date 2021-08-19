@@ -12,7 +12,7 @@ class PostsController < ApplicationController
 
   def index
     # フォローしているユーザーと自分の投稿を表示
-    @posts = Post.where(user_id: [current_user.id, *current_user.following_ids]).order("created_at DESC").page(params[:page]).per(9)
+    @posts = Post.where(user_id: [current_user.id, *current_user.following_ids]).order("created_at DESC").page(params[:page]).per(8)
   end
 
   def show

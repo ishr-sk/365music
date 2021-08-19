@@ -1,36 +1,29 @@
 <div id="user-header" class="big-bg">
   <%= render 'layouts/header' %>
 </div>
+<% if @user.id == current_user.id %>
+  <h4>my page</h4>
+<% else %>
+  <h4>user info</h4>
+<% end %>
 
-<div class="container mb-5">
-    <div class="row justify-content-end">
-      <%= render 'searches/search-form' %>
+<div class="row justify-content-end">
+  <%= render 'searches/search-form' %>
+</div>
+<div class="mypage-content wrapper">
+  <aside>
+    <%= render 'user-info', user: @user %>
+    <div class="new-365">
+      <%= render 'posts/new-btn' %>
     </div>
-    <% if @user.id == current_user.id %>
-      <h4>my page</h4>
-    <% else %>
-      <h4>user info</h4>
-    <% end %>
-  <div class="row">
-        <div class="col-3">
-          <aside>
-            <div class="new-365">
-              <%= render 'posts/new-btn' %>
-            </div>
-            <div class="my-schedule">
-              <%= render 'posts/schedule-btn' %>
-            </div>
-            <div class="new-setlist">
-              <%= render 'posts/setlist-btn' %>
-            </div>
-          </aside>
-        </div>
-<div class="col-8">
- <%= render 'user-info', user: @user %>
+    <div class="my-schedule">
+      <%= render 'posts/schedule-btn' %>
+    </div>
+    <div class="new-setlist">
+      <%= render 'posts/setlist-btn' %>
+    </div>
+  </aside>
+  <article>
+      <%= render 'posts/index', posts: @posts %>
+    </article>
 </div>
-        <div class="col-8">
-          <%= render 'posts/index', posts: @posts %>
-        </div>
-  </div>
-</div>
-

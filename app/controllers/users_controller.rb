@@ -2,7 +2,7 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     # ログインユーザーのみの投稿表示
-    @posts = @user.posts.order("created_at DESC").page(params[:page]).per(9)
+    @posts = @user.posts.order("created_at DESC").page(params[:page]).per(6)
   end
 
   def index

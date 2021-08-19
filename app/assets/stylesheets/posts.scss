@@ -7,14 +7,14 @@
 
 // newボタン
 section {
-  max-width: 300px;
+  max-width: 100%;
   margin: 0 auto;
 }
 a.btn_03 {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 60%;
+  width: 100%;
   height: 50px;
   position: relative;
   background: #82aaaa;
@@ -54,10 +54,10 @@ a.btn_03:hover:before {
 }
 
 .new-365 {
-  margin: 70px 0 20px;
+  margin: 40px 0 40px;
 }
 .new-setlist {
-  margin: 20px 5px;
+  margin: 40px 0 5px;
 }
 
 
@@ -84,6 +84,7 @@ $color_grey_dark: #a2a2a2;
   border-radius: 5px;
   overflow: hidden;
   z-index: 0;
+  border-radius: 15px;
   a {
     // color: inherit;
     &:hover {
