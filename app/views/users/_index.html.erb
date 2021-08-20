@@ -2,7 +2,12 @@
 <div class="user-box">
   <div class="card-user">
     <div class="front-user">
-      <div class="logo-user"><span><%= attachment_image_tag user, :profile_image, :fill, 100, 100, fallback: "noimage.jpg", class: "mr-3 align-self-start rounded-circle" %></span></div>
+      <div class="logo-user">
+        <span>
+          <%= attachment_image_tag user, :profile_image, fallback: "noimage.jpg", class: "mr-3 index-img" %>
+        </span>
+      </div>
+      <span><%= user.name %></span>
     </div>
     <div class="back-user">
       <div class="user-name">
@@ -25,7 +30,7 @@
           <% if user.followed_by?(current_user) %>
             <%= link_to "フォロー中", user_relationships_path(user.id), method: :delete, class: "btn btn-outline-dark btn-sm mr-2" %>
           <% else %>
-            <%= link_to "フォローする", user_relationships_path(user.id), method: :post, class: "btn btn-info btn-sm mr-2" %>
+            <%= link_to "フォローする", user_relationships_path(user.id), method: :post, class: "btn btn-outline-light btn-sm mr-2" %>
           <% end %>
         <% end %>
       </ul>
