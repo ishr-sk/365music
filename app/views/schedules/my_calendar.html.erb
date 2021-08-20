@@ -2,18 +2,36 @@
   <%= render 'layouts/header' %>
 </div>
 
-<div class='container'>
-<div class="row">
-      <div class="col-sm-12 col-md-8 col-lg-5 px-5 px-sm-0 mx-auto">
-  <div class="page-header">
-    <h3>マイカレンダー</h3>
-  </div>
-
-
-
-  <%= link_to 'スケジュール登録', new_schedule_path, class: 'btn btn-success' %>
-  <div id="calendar"></div>
-  </br>
+<div class="sub-title">
+  <span class="title">my schedule</span>
 </div>
+
+<div class="row justify-content-end">
+  <%= render 'searches/search-form' %>
 </div>
+<div class="mypage-content wrapper">
+  <aside>
+    <%= render 'users/user-info', user: current_user %>
+    <div class="new-365">
+      <%= render 'posts/new-btn' %>
+    </div>
+    <div class="my-schedule">
+      <%= render 'posts/schedule-btn' %>
+    </div>
+    <div class="new-setlist">
+      <%= render 'posts/setlist-btn' %>
+    </div>
+  </aside>
+  <article class="schedule-show">
+    <div class='container'>
+      <div class="row">
+        <div class="col-sm-8 px-5 px-sm-0 mx-auto">
+          <%= link_to 'new', new_schedule_path, class: 'btn-circle-flat no-underline' %>
+          <div data-turbolinks='false'>
+            <div id="calendar"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
 </div>

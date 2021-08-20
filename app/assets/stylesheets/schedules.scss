@@ -4,3 +4,23 @@
   margin-bottom: 40px;
   filter: grayscale(40%);
 }
+
+.btn-circle-flat {
+  display: inline-block;
+  text-decoration: none;
+  background: #fff;
+  color: #82aaaa;
+  border: 1px solid #82aaaa;
+  width: 80px;
+  height: 80px;
+  line-height: 80px;
+  border-radius: 50%;
+  text-align: center;
+  overflow: hidden;
+  transition: .4s;
+}
+
+.btn-circle-flat:hover {
+  background: #82aaaa;
+  color: #ffffff;
+}

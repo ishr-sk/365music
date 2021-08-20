@@ -35,7 +35,7 @@ $(function() {
       day: '日',
     },
     timeFormat: 'HH:mm',
-    eventColor: '#63ceef',
+    eventColor: '#f7c6bd',
     eventTextColor: '#000000',
   });
 });
