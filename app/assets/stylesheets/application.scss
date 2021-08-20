@@ -369,3 +369,21 @@ form {
 .page-link {
   background: #f5f5f5;;
 }
+
+// my page
+article {
+  width: 70%;
+  margin: 0 auto;
+}
+aside {
+  width: 23%;
+  margin-left: 80px;
+  margin-right: auto;
+  margin-top: 15px;
+  margin-bottom: 200px;
+}
+
+.mypage-content {
+  display: flex;
+  justify-content: space-between;
+}
