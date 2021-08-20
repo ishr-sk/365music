@@ -2,10 +2,13 @@
   <%= render 'layouts/header' %>
 </div>
 
-<div class='container'>
+<div class="sub-title">
+  <span class="title">editing post</span>
+</div>
+
+<div class='container mt-5 mb-5'>
   <div class='row'>
     <div class="col-sm-12 col-md-8 col-lg-5 px-5 px-sm-0 mx-auto">
-      <h4>Editing Post</h4>
         <%= form_with model: @post, local: true do |f| %>
           <div class="form-group">
             <%= f.label :image %>
@@ -13,23 +16,23 @@
           </div>
           <div class="form-group">
             <%= f.label :title %>
-            <%= f.text_field :title, class: "form-control" %>
+            <%= f.text_field :title, class: "form-control", placeholder: "タイトル" %>
           </div>
           <div class="form-group">
             <%= f.label :artist %>
-            <%= f.text_field :artist, class: "form-control" %>
+            <%= f.text_field :artist, class: "form-control", placeholder: "投稿に関連しているアーティスト名" %>
           </div>
           <div class="form-group">
             <%= f.label :event %>
-            <%= f.text_field :event, class: "form-control" %>
+            <%= f.text_field :event, class: "form-control", placeholder: "投稿に関連しているイベント名"  %>
           </div>
           <div class="form-group">
             <%= f.label :caption %>
-            <%= f.text_area :body, class: "form-control" %>
+            <%= f.text_area :body, class: "form-control", placeholder: "＃をつけてハッシュタグ検索を活用しよう"  %>
           </div>
-          <div class="form-group" ontouchstart="">
-            <%= f.submit 'update', class: 'reset button-circle color1' %>
-          </div>
+          <section class="post-new">
+            <%= f.submit 'submit', class: 'btn_5 no-underline' %>
+          </section>
         <% end %>
     </div>
   </div>
