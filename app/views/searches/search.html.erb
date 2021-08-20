@@ -2,9 +2,27 @@
   <%= render 'layouts/header' %>
 </div>
 
-<div class="container">
-  <h1>search for "<%= params[:word] %>"</h1>
-  <div class="row row-cols-1 row-cols-md-3 g-4">
+<div class="sub-title">
+  <span class="title">search for "<%= params[:word] %>"</span>
+</div>
+
+<div class="row justify-content-end">
+  <%= render 'searches/search-form' %>
+</div>
+<div class="mypage-content wrapper">
+  <aside>
+    <%= render 'users/user-info', user: current_user %>
+    <div class="new-365">
+      <%= render 'posts/new-btn' %>
+    </div>
+    <div class="my-schedule">
+      <%= render 'posts/schedule-btn' %>
+    </div>
+    <div class="new-setlist">
+      <%= render 'posts/setlist-btn' %>
+    </div>
+  </aside>
+  <article>
     <% if @category == '2' %>
       <%= render 'index-post', post: @post %>
     <% end %>
@@ -14,5 +32,5 @@
     <% if @category == '3' %>
       <%= render 'index-setlist', setlist: @setlist %>
     <% end %>
-  </div>
+    </article>
 </div>

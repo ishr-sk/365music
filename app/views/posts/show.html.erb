@@ -2,44 +2,27 @@
   <%= render 'layouts/header' %>
 </div>
 
-<div class='container'>
-  <div class='row'>
-    <div class="col-sm-12 col-md-8 col-lg-5 px-5 px-sm-0 mx-auto">
-      <div class="card" style="width: 25rem;">
-        <%= attachment_image_tag @post, :image, fallback: "noimage.jpg", class: "card-img-top" %>
-          <div class="card-body">
-            <p class="card-text">
-              <b><i class="fas fa-at"><%= @post.user.name %></i></b>
-              <span id="likes-<%= @post.id %>"><%= render "likes/like-btn", post: @post %></span>
-              <small class="text-muted"><%= @post.created_at.strftime('%Y/%m/%d') %></small>
-            </p>
-            <p class="card-text"><%= render_with_hashtags(@post.body) %></p>
-          </div>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item">song title：<%= @post.title %></li>
-            <li class="list-group-item">artist：<%= @post.artist %></li>
-            <li class="list-group-item">event：<%= @post.event %></li>
-            <li class="list-group-item">
-              <div id="comments-index-<%= @post.id %>">
-                <%= render 'post_comments/index', post: @post %>
-              </div>
-              <div class="form-inline justify-content-end">
-                <%= form_with model:[@post, @post_comment], remote: true do |f| %>
-                  <%= f.text_area :comment, rows:'5', placeholder: "commentする", class: "form-control-sm" %>
-                  <%= f.submit "送信", class: "btn btn-outline-secondary btn-sm mb-4" %>
-                <% end %>
-              </div>
-            </li>
-          </ul>
-          <% if @post.user == current_user %>
-          <div class="card-body text-center">
+<div class="sub-title">
+  <span class="title">365</span>
+</div>
 
-              <%= link_to '', edit_post_path(@post), class: "btn btn-outline-dark far fa-edit" %>
-              <%= link_to '', post_path(@post), method: :delete, "data-confirm" => "本当に消しますか?", class: "btn btn-outline-danger fas fa-trash-alt" %>
-
-          </div>
-          <% end %>
-      </div>
+<div class="row justify-content-end">
+  <%= render 'searches/search-form' %>
+</div>
+<div class="mypage-content wrapper">
+  <aside>
+    <%= render 'users/user-info', user: current_user %>
+    <div class="new-365">
+      <%= render 'posts/new-btn' %>
     </div>
-  </div>
+    <div class="my-schedule">
+      <%= render 'posts/schedule-btn' %>
+    </div>
+    <div class="new-setlist">
+      <%= render 'posts/setlist-btn' %>
+    </div>
+  </aside>
+  <article class="post-show">
+    <%= render 'posts/show', post: @post, post_comment: @post_comment %>
+  </article>
 </div>
