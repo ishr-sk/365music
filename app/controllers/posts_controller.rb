@@ -39,7 +39,7 @@ class PostsController < ApplicationController
   def hashtag
     @user = current_user
     @tag = Hashtag.find_by(hashname: params[:name])
-    @posts = @tag.posts
+    @posts = @tag.posts.order("created_at DESC").page(params[:page]).per(8)
   end
 
   private
