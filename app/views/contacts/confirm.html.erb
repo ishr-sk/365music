@@ -42,7 +42,7 @@
                   </td>
                 </tr>
               </table>
-              <%= f.submit '送信', :class => 'btn btn-primary' %>
+              <%= f.submit '送信', class: 'btn_9 no-underline mb-3' %>
             <% end %>
             <%= form_with model: @contact, url: back_path do |f| %>
               <%= f.hidden_field :name %>
@@ -50,7 +50,7 @@
               <%= f.hidden_field :email %>
               <%= f.hidden_field :subject %>
               <%= f.hidden_field :message %>
-              <div><%= f.submit '入力画面に戻る' %></div>
+              <div><%= f.submit '入力画面に戻る', class: 'btn_8 no-underline mb-5' %></div>
             <% end %>
         </div>
       </div>

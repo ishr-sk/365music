@@ -3,7 +3,9 @@
     <div class='container mb-5'>
       <div class='row'>
         <div class="col-sm-12 col-md-8 col-lg-5 px-5 px-sm-0 mx-auto">
-          <h4>お問い合わせ</h4>
+          <div class="sub-title">
+            contact
+          </div>
           <p>*は入力必須項目になります。</p>
             <%= form_with model: @contact, url: confirm_path, method: :post, local: true do |f| %>
               <div class="form-group">
@@ -30,9 +32,8 @@
                 <%= f.label :message, 'メッセージ*' %>
                 <%= f.text_area :message, size: '8x8', class: 'form-control' %>
               </div>
-            
               <div>
-                <%= f.submit '入力内容確認' %>
+                <%= f.submit '入力内容確認', class: 'btn_5 no-underline' %>
               </div>
             <% end %>
         </div>
