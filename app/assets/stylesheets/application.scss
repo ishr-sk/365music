@@ -337,3 +337,35 @@ form {
   font-size: 57px;
   margin-left: 110px;
 }
+
+
+// ページネーション
+.pagination>li>a {
+  border: none;
+  color: #696969;
+}
+
+.pagination>.active>a {
+  background: #696969;
+  border-radius: 15px;
+}
+
+.pagination>li>a:hover {
+  border-radius: 15px;
+  color: #696969;
+}
+
+.pagination {
+  justify-content: center;
+}
+
+.page-item.active .page-link {
+    z-index: 3;
+    color: #fff;
+    background: #82aaaa;
+    border: #82aaaa;
+}
+
+.page-link {
+  background: #f5f5f5;;
+}
