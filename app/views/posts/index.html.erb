@@ -5,34 +5,23 @@
   <span class="title">365</span>
 </div>
 
-<div class="container">
-  <div class="row row-cols-1 row-cols-md-3 g-4">
-      <% @posts.each do |post| %>
-        <div class="card h-100">
-          <div class="card-header bg-transparent">
-            <%= link_to user_path(post.user.id) do %>
-              <%= attachment_image_tag post.user, :profile_image, :fill, 45, 45, fallback: "noimage.jpg", class: "mr-3 align-self-start rounded-circle" %>
-            <% end %>
-            <b><%= post.user.name %></b>
-          </div>
-          <%= link_to post_path(post.id) do %>
-            <%= attachment_image_tag post, :image, fallback: "noimage.jpg", class: "card-img-top" %>
-          <% end %>
-          <div class="card-body">
-            <p class="card-title">
-              <b><i class="fas fa-at"><%= post.user.name %></i></b>
-              <span id="likes-<%= post.id %>"><%= render "likes/like-btn", post: post %></span>
-              <i class="far fa-comments"> <%= post.post_comments.count %></i>
-            </p>
-            <p class="card-text">
-              <%= render_with_hashtags(post.body) %></br>
-            </p>
-          </div>
-          <div class="card-footer text-right">
-            <small class="text-muted"><%= time_ago_in_words(post.created_at) %></small>
-          </div>
-        </div>
-      <% end %>
-      <%= paginate @posts %>
-  </div>
+<div class="row justify-content-end">
+  <%= render 'searches/search-form' %>
+</div>
+<div class="mypage-content wrapper">
+  <aside>
+    <%= render 'users/user-info', user: current_user %>
+    <div class="new-365">
+      <%= render 'posts/new-btn' %>
+    </div>
+    <div class="my-schedule">
+      <%= render 'posts/schedule-btn' %>
+    </div>
+    <div class="new-setlist">
+      <%= render 'posts/setlist-btn' %>
+    </div>
+  </aside>
+  <article>
+      <%= render 'posts/index', posts: @posts %>
+    </article>
 </div>
