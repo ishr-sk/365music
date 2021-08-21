@@ -2,41 +2,64 @@
   <%= render 'layouts/header' %>
 </div>
 
-<div class='container'>
-  <div class='row'>
-    <div class="col-sm-12 col-md-8 col-lg-5 px-5 px-sm-0 mx-auto mb-5">
-      <% @direct_messages.each do |direct_message| %>
-        <% if direct_message.user == current_user %>
-          <div class="balloon_l">
-            <div class="faceicon">
-              <%= attachment_image_tag direct_message.user, :profile_image, fallback: "noimage.jpg", class: "mr-3 align-self-start rounded-circle" %>
-              </br>
-              <small class="text-black"><%= direct_message.user.name %></small>
-            </div>
-            <p class="says">
-              <%= direct_message.message %>
-            </p>
+<div class="sub-title">
+  <span class="title">message</span>
+</div>
+
+<div class="row justify-content-end">
+  <%= render 'searches/search-form' %>
+</div>
+<div class="mypage-content wrapper">
+  <aside>
+    <%= render 'users/user-info', user: current_user %>
+    <div class="new-365">
+      <%= render 'posts/new-btn' %>
+    </div>
+    <div class="my-schedule">
+      <%= render 'posts/schedule-btn' %>
+    </div>
+    <div class="new-setlist">
+      <%= render 'posts/setlist-btn' %>
+    </div>
+  </aside>
+  <article class="schedule-show">
+    <div class='container'>
+      <div class='row mt-5 mb-5'>
+        <div class="col-sm-8 px-5 px-sm-0 mx-auto">
+          <% @direct_messages.each do |direct_message| %>
+            <% if direct_message.user == current_user %>
+            <div class="message-date"><%= direct_message.created_at.strftime("%Y.%m.%d") %></div>
+              <div class="balloon_l">
+                <div class="faceicon">
+                  <%= attachment_image_tag direct_message.user, :profile_image, fallback: "noimage.jpg", class: "mr-3 align-self-start" %>
+                  </br>
+                </div>
+                <p class="says">
+                  <%= direct_message.message %>
+                </p>
+              </div>
+            <% else %>
+            <div class="message-date"><%= direct_message.created_at.strftime("%Y.%m.%d") %></div>
+              <div class="balloon_r">
+                <div class="faceicon">
+                  <%= attachment_image_tag direct_message.user, :profile_image, fallback: "noimage.jpg", class: "mr-3 align-self-start" %>
+                  </br>
+                </div>
+                <div class="says">
+                  <%= direct_message.message %>
+                </div>
+              </div>
+            <% end %>
+          <% end %>
+          <div class="form-inline justify-content-center">
+            <%= form_with model: @direct_message do |f| %>
+              <%= f.text_field :message, placeholder: "メッセージを作成", class: "form-control" %>
+              <%= f.hidden_field :room_id %>
+              <%= f.submit 'send', class: 'btn btn-outline-secondary btn-sm' %>
+            <% end %>
           </div>
-        <% else %>
-          <div class="balloon_r">
-            <div class="faceicon">
-              <%= attachment_image_tag direct_message.user, :profile_image, fallback: "noimage.jpg", class: "mr-3 align-self-start rounded-circle" %>
-              </br>
-              <small class="text-black"><%= direct_message.user.name %></small>
-            </div>
-            <div class="says">
-              <%= direct_message.message %>
-            </div>
-          </div>
-        <% end %>
-      <% end %>
-      <div class="form-inline justify-content-center">
-        <%= form_with model: @direct_message do |f| %>
-          <%= f.text_field :message, placeholder: "メッセージを作成", class: "form-control" %>
-          <%= f.hidden_field :room_id %>
-          <%= f.submit 'send', class: 'btn btn-outline-secondary btn-sm' %>
-        <% end %>
+        </div>
       </div>
     </div>
-  </div>
+  </article>
 </div>
