@@ -74,3 +74,37 @@
     </div>
   </article>
 </div>
+
+
+
+<% posts.each do |post| %>
+  <div class="blog-card post-index">
+    <div class="meta">
+      <div class="photo" style="background-image">
+        <%= attachment_image_tag post, :image, fallback: "noimage.jpg", class: "card-img-top" %>
+      </div>
+      <ul class="details">
+        <li class="date"><%= time_ago_in_words(post.created_at) %></li>
+        <li>song title：<%= post.title %></li>
+        <li>artist：<%= post.artist %></li>
+        <li>event：<%= post.event %></li>
+      </ul>
+    </div>
+    <div class="description">
+      <h5>
+        <%= link_to user_path(post.user.id), class: "no-underline" do %>
+          <%= attachment_image_tag post.user, :profile_image, :fill, 30, 30, fallback: "noimage.jpg", class: "align-self-start rounded-circle" %>
+        <% end %>
+        ＠<%= post.user.name %>
+      </h5>
+      <span>
+        <span id="likes-<%= post.id %>"><%= render "likes/like-btn", post: post %></span>
+        <i class="far fa-comments"> <%= post.post_comments.count %></i>
+      </span>
+      <p class="post-body"><%= render_with_hashtags(post.body) %></p>
+      <p class="read-more"><%= link_to 'Read More', post_path(post.id), class: "no-underline" %></p>
+      </p>
+    </div>
+  </div>
+ <% end %>
+<%= paginate posts %>

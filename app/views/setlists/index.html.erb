@@ -2,16 +2,15 @@
   <%= render 'layouts/header' %>
 </div>
 
-<% if user_signed_in? %>
-  <%= link_to 'セットリスト登録', new_setlist_path %>
-<% end %>
-
-<% @setlists.each do |setlist| %>
-  <div>
-    <%= link_to setlist_path(setlist.id) do %>
-         artist：<%= setlist.artist %>
-    <% end %>
-         event：<%= setlist.event %>
-         venue：<%= setlist.venue %>
+<div class='container'>
+  <div class='row justify-content-center'>
+    <div class="col-sm-3 px-sm-0 mx-auto">
+      <% if user_signed_in? %>
+        <%= link_to 'new setlist', new_setlist_path, class: 'btn_setlist no-underline' %>
+      <% end %>
+    </div>
   </div>
-<% end %>
+  <div class="col-sm-8 px-sm-0 mx-auto">
+    <%= render 'index', setlists: @setlists %>
+  </div>
+</div>
