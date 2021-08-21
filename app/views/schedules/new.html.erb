@@ -2,32 +2,33 @@
   <%= render 'layouts/header' %>
 </div>
 
-<div class='container'>
-  <h1>Schedules#new</h1>
-  <div class='row'>
-    
-      
-        <%= form_with model: @schedule, url: schedules_path, local: true do |f| %>
-          <div class="form-group">
-            <%= f.label :title, 'スケジュール名' %>
-            <%= f.text_field :title, class: 'form-control' %>
-          </div>
-          <div class="form-group">
-            <%= f.label :body, 'スケジュール内容' %>
-            <%= f.text_area :body, class: 'form-control' %>
-          </div>
-          <div class="form-group">
-            <%= f.label :start_date, '開始日時' %>
-            <%= f.datetime_field :start_date, class: 'form-control datetime-form' %>
-          </div>
-          <div class="form-group">
-            <%= f.label :end_date, '終了日時' %>
-            <%= f.datetime_field :end_date, class: 'form-control datetime-form' %>
-          </div>
-          <div class="form-group">
-            <%= f.submit 'submit', class: 'btn btn-success btn-block' %>
-          </div>
-        <% end %>
-    
-  </div>
+<div class="sub-title">
+  <span class="title">new schedule</span>
+</div>
+
+<div class="row justify-content-end">
+  <%= render 'searches/search-form' %>
+</div>
+<div class="mypage-content wrapper">
+  <aside>
+    <%= render 'users/user-info', user: current_user %>
+    <div class="new-365">
+      <%= render 'posts/new-btn' %>
+    </div>
+    <div class="my-schedule">
+      <%= render 'posts/schedule-btn' %>
+    </div>
+    <div class="new-setlist">
+      <%= render 'posts/setlist-btn' %>
+    </div>
+  </aside>
+  <article class="schedule-show">
+    <div class='container mt-5'>
+      <div class='row'>
+        <div class="col-sm-5 px-5 px-sm-0 mx-auto">
+          <%= render 'new', schedule: @schedule  %>
+        </div>
+      </div>
+    </div>
+  </article>
 </div>

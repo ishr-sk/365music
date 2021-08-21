@@ -42,7 +42,7 @@ class SchedulesController < ApplicationController
 
   def destroy
     @schedule.destroy
-    redirect_to schedules_my_calendar_path
+    redirect_to my_calendar_path
   end
 
   def my_calendar

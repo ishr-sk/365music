@@ -2,49 +2,75 @@
   <%= render 'layouts/header' %>
 </div>
 
-<div class='container'>
-  <div class='row'>
-    <div class="col-sm-12 col-md-8 col-lg-5 px-5 px-sm-0 mx-auto">
-<h1>Schedules#show</h1>
-
-<div class="row">
-  <table class="table table-bordered">
-    <tbody>
-      <tr>
-        <th class="active">
-          スケジュール名
-        </th>
-        <td>
-          <%= @schedule.title %>
-        </td>
-      </tr>
-      <tr>
-        <th class="active">
-          スケジュール内容
-        </th>
-        <td>
-          <%= @schedule.body %>
-        </td>
-      </tr>
-      <tr>
-        <th class="active">開始日時</th>
-        <td>
-          <%= @schedule.start_date.to_s(:datetime_jp) %>
-        </td>
-      </tr>
-      <tr>
-        <th class="active">終了日時</th>
-        <td><%= @schedule.end_date.to_s(:datetime_jp) %></td>
-      </tr>
-    </tbody>
-  </table>
+<div class="sub-title">
+  <span class="title">my schedule</span>
 </div>
 
-  <% if @schedule.user == current_user %>
-   <%= link_to 'スケジュール登録', new_schedule_path, class: 'btn btn-success' %>
-   <%= link_to '編集', edit_schedule_path(@schedule), class: 'btn btn-primary' %>
-   <%= link_to '削除', schedule_path(@schedule), method: :delete, "data-confirm" => "本当に消しますか?", class: 'btn btn-danger' %>
-  <% end %>
+<div class="row justify-content-end">
+  <%= render 'searches/search-form' %>
+</div>
+<div class="mypage-content wrapper">
+  <aside>
+    <%= render 'users/user-info', user: current_user %>
+    <div class="new-365">
+      <%= render 'posts/new-btn' %>
     </div>
-  </div>
+    <div class="my-schedule">
+      <%= render 'posts/schedule-btn' %>
+    </div>
+    <div class="new-setlist">
+      <%= render 'posts/setlist-btn' %>
+    </div>
+  </aside>
+  <article class="schedule-show">
+    <div class='container mt-3'>
+      <div class='row'>
+        <div class="col-sm-8 px-5 px-sm-0 mx-auto">
+          <% if @schedule.user == current_user %>
+            <%= link_to 'new', new_schedule_path, class: 'btn-circle-flat no-underline' %>
+          <% end %>
+          <table class="table table-bordered mt-3">
+            <tbody>
+              <tr>
+                <th class="active">
+                  <i class="far fa-calendar-alt"></i> title
+                </th>
+                <td>
+                  <%= @schedule.title %>
+                </td>
+              </tr>
+              <tr>
+                <th class="active">
+                  <i class="fas fa-pen-nib"></i> memo
+                </th>
+                <td>
+                  <%= @schedule.body %>
+                </td>
+              </tr>
+              <tr>
+                <th class="active">start date</th>
+                <td>
+                  <%= @schedule.start_date.strftime("%Y-%m-%d %H:%M") %>
+                </td>
+              </tr>
+              <tr>
+                <th class="active">end date</th>
+                <td><%= @schedule.end_date.strftime("%Y-%m-%d %H:%M") %></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class='schedule-container'>
+            <% if @schedule.user == current_user %>
+              <div class="schedule-btn">
+                <%= link_to 'edit', edit_schedule_path(@schedule), class: 'btn_7 no-underline' %>
+              </div>
+              <div class="schedule-btn">
+                <%= link_to 'delete', schedule_path(@schedule), method: :delete, "data-confirm" => "本当に消しますか?", class: 'btn_6 no-underline' %>
+              </div>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
 </div>
