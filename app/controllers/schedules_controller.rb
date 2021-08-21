@@ -1,6 +1,5 @@
 class SchedulesController < ApplicationController
   before_action :set_schedule, only: [:show, :edit, :update, :destroy]
-  # before_action :authenticate_user!
 
   def new
     @schedule = Schedule.new
