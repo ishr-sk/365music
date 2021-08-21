@@ -1,5 +1,6 @@
 class SchedulesController < ApplicationController
   before_action :set_schedule, only: [:show, :edit, :update, :destroy]
+  # before_action :authenticate_user!
 
   def new
     @schedule = Schedule.new
@@ -16,7 +17,10 @@ class SchedulesController < ApplicationController
   end
 
   def show
-    @schedule = Schedule.find(params[:id])
+    # もしログインユーザーではないユーザーだったら閲覧できない
+    unless @schedule.user == current_user
+      redirect_to root_path
+    end
   end
 
   def index
