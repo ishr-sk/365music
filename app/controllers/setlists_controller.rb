@@ -1,4 +1,6 @@
 class SetlistsController < ApplicationController
+  before_action :authenticate_user!, except: [:show, :index]
+
   def new
     @setlist = Setlist.new
     @song = @setlist.songs.build
