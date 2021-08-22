@@ -4,29 +4,56 @@
 
 <div class='container'>
   <div class='row'>
-    <div class="col-sm-12 col-md-8 col-lg-5 px-5 px-sm-0 mx-auto">
-      <div class="card" style="width: 25rem;">
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item">artist：<%= @setlist.artist %></li>
-            <li class="list-group-item">event：<%= @setlist.event %></li>
-             <li class="list-group-item">date：<%= @setlist.date %></li>
-            <li class="list-group-item">venue：<%= @setlist.venue %></li>
-            <h5>song</h5>
-            <!--配列の中身に番号を付番したい→with_index(1)で1から始まる数字を付けられる-->
-            <% @setlist.songs.each.with_index(1) do |song, index| %>
-              <li class="list-group-item"><%= index %>:<%= song.title %></li>
-            <% end %>
-            <h5>encore</h5>
-             <% @setlist.encores.each.with_index(1) do |encore, index| %>
-              <li class="list-group-item">Encore<%= index %>:<%= encore.title %></li>
-            <% end %>
-
-            <!--会員のみ編集できる-->
-            <% if user_signed_in? %>
-              <%= link_to '', edit_setlist_path(@setlist), class: "btn btn-outline-dark far fa-edit" %>
-            <% end %>
-          </ul>
-      </div>
+    <div class="col-sm-12 col-md-12 col-lg-5 px-5 px-sm-0 mx-auto">
+      <h3><%= @setlist.artist %></h3>
+        <div class="setlist-edit">
+          <!--会員のみ編集できる-->
+          <% if user_signed_in? %>
+            <%= link_to '', edit_setlist_path(@setlist), class: "btn btn-outline-dark far fa-edit" %>
+          <% end %>
+        </div>
+        <table class="osare5-table col5t mt-3">
+          <tbody>
+            <tr>
+              <th>artist</th>
+                <td><%= @setlist.artist %></td>
+            </tr>
+            <tr>
+              <th>event</th>
+                <td><%= @setlist.event %></td>
+            </tr>
+            <tr>
+              <th>date</th>
+                <td><%= @setlist.date.strftime("%Y-%m-%d %H:%M") %></td>
+            </tr>
+            <tr>
+              <th>venue</th>
+                <td>＠<%= @setlist.venue %></td>
+            </tr>
+            <tr>
+              <th>song</th>
+                <td>
+                  <ul class="text-child">
+                    <% @setlist.songs.each.with_index(1) do |song, index| %>
+                      <li><%= index %>: <%= song.title %></li>
+                    <% end %>
+                  </ul>
+                </td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <th>encore</th>
+                <td>
+                  <ul class="encore-child">
+                    <% @setlist.encores.each.with_index(1) do |encore, index| %>
+                      <li><%= index %>: <%= encore.title %></li>
+                    <% end %>
+                  </ul>
+                </td>
+            </tr>
+          </tfoot>
+        </table>
     </div>
   </div>
 </div>
