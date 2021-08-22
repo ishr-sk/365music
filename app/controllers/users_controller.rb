@@ -8,7 +8,7 @@ class UsersController < ApplicationController
   end
 
   def index
-    @users = User.where(is_deleted: false)
+    @users = User.where(is_deleted: false).order("created_at DESC").page(params[:page]).per(8)
   end
 
   def edit
