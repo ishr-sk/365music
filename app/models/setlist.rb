@@ -21,4 +21,11 @@ class Setlist < ApplicationRecord
     end
   end
   # ================ 検索機能 ================ 
+  
+   with_options presence: true do
+    validates :artist
+    validates :date
+    validates :event
+    validates :venue
+  end
 end

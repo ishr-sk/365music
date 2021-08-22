@@ -47,4 +47,8 @@ class Post < ApplicationRecord
     end
   end
   # ================ 検索機能 ================
+
+  validates :title, length: {maximum: 50}
+  validates :body, length: {maximum: 200}
+  validates :user_id, presence: true
 end
