@@ -1,7 +1,16 @@
 <div id="setlist-header" class="big-bg">
   <%= render 'layouts/header' %>
 </div>
-
-<h1>setlist</h1>
-<%= render 'form', setlist: @setlist %>
-<%= link_to 'Back', setlists_path %>
+<div class='container mb-5'>
+  <div class="sub-title">
+    new setlist
+  </div>
+  <div class='row'>
+    <div class="col-sm-12 col-md-8 col-lg-5 px-5 px-sm-0 mx-auto">
+      <%= render 'form', setlist: @setlist %>
+      <div class="btn-back">
+      <%= link_to 'Back', setlists_path, class: 'no-underline' %>
+      </div>
+    </div>
+  </div>
+</div>

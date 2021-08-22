@@ -1,39 +1,37 @@
 <%= form_with model: @setlist, local: true do |s| %>
     <div class="form-group">
     <%= s.label :artist %>
-    <%= s.text_field :artist %>
+    <%= s.text_field :artist, placeholder: "アーティスト名を入力してください", class: 'form-control' %>
     </div>
     <div class="form-group">
     <%= s.label :date %>
-    <%= s.datetime_field :date %>
+    <%= s.datetime_field :date, class: 'form-control' %>
       </div>
     <div class="form-group">
     <%= s.label :event %>
-    <%= s.text_field :event %>
+    <%= s.text_field :event, placeholder: "ツアー/イベント名を入力してください", class: 'form-control' %>
       </div>
     <div class="form-group">
     <%= s.label :venue %>
-    <%= s.text_field :venue %>
+    <%= s.text_field :venue, placeholder: "会場名を入力してください", class: 'form-control' %>
     </div>
     <div class="form-group">
       <div class="parents">
-        <%= link_to_add_association "songを追加", s, :songs, data: { association_insertion_method: 'append' } %>
+        <%= link_to_add_association "＋song", s, :songs, data: { association_insertion_method: 'append' }, class: "btn btn-outline-dark btn-sm mb-1" %>
           <%= s.fields_for :songs do |t| %>
               <%= render "song_fields", f: t %>
           <% end %>
-          
       </div>
     </div>
         <div class="form-group">
       <div class="parents">
-        <%= link_to_add_association "encoreを追加", s, :encores, data: { association_insertion_method: 'append' } %>
+        <%= link_to_add_association "＋encore", s, :encores, data: { association_insertion_method: 'append' }, class: "btn btn-outline-dark btn-sm mb-1" %>
           <%= s.fields_for :encores do |u| %>
               <%= render "encore_fields", f: u %>
           <% end %>
-          
       </div>
     </div>
     <div class="actions">
-        <%= s.submit %>
+        <%= s.submit 'submit', class: 'btn_song no-underline' %>
     </div>
 <% end %>

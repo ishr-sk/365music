@@ -233,3 +233,65 @@ h3:first-letter {
   font-size: 2em;
   color: #82aaaa;
 }
+
+.btn_song {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  position: relative;
+  background: #82aaaa;
+  border: 1px solid #82aaaa;
+  border-radius: 30px;
+  box-sizing: border-box;
+  padding: 0 45px 0 45px;
+  color: #fff;
+  font-family: 'Raleway', sans-serif;
+  font-size: 16px;
+  letter-spacing: 0.1em;
+  line-height: 1.3;
+  text-decoration: none;
+  transition-duration: 0.3s;
+}
+.btn_song:hover {
+  background: #fff;
+  color: #82aaaa;
+}
+
+.actions {
+  max-width: 50%;
+  margin: 0 auto;
+}
+
+.btn-back {
+  position: relative;
+  display: inline-block;
+  font-weight: bold;
+  padding: 0.25em 0;
+  text-decoration: none;
+}
+
+.btn-back a {
+  color: #000000;
+}
+.btn-back a:hover {
+  color: #808080;
+}
+
+.btn-back:before {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 4px;
+  top: 100%;
+  left: 0;
+  border-radius: 3px;
+  background: #82aaaa;
+  transition: .2s;
+}
+
+.btn-back:hover:before {
+  top: -webkit-calc(100% - 3px);
+  top: calc(100% - 3px);
+}
