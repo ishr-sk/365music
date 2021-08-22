@@ -55,6 +55,11 @@
   color: #82aaaa;
 }
 
+.setlist-artist {
+  position: relative;
+  padding: 0.25em 0;
+}
+
 .setlist-artist:after {
   content: "";
   display: block;

@@ -340,3 +340,15 @@ span a:hover {
   margin-left: 5px;
   margin-right: 0;
 }
+
+.user-top {
+  position: relative;
+  padding: 0.25em 0;
+}
+.user-top:after {
+  content: "";
+  display: block;
+  height: 4px;
+  background: -webkit-linear-gradient(to right, rgb(130, 170, 170), transparent);
+  background: linear-gradient(to right, rgb(130, 170, 170), transparent);
+}
