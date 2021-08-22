@@ -1,4 +1,6 @@
 class DirectMessagesController < ApplicationController
+  before_action :authenticate_user!
+
   def show
     # どのユーザと会話するか取得
     @user = User.find(params[:id])

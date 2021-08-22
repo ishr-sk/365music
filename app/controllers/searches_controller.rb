@@ -1,4 +1,5 @@
 class SearchesController < ApplicationController
+  before_action :authenticate_user!
   # viewから飛ばした3つのparamsを各インスタンス変数かローカル変数の中に入れる
   def search
     @category = params[:category]
