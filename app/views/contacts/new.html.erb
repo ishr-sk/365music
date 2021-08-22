@@ -7,26 +7,27 @@
             contact
           </div>
             <%= form_with model: @contact, url: confirm_path, method: :post, local: true do |f| %>
+            <%= render 'error_messages', model: f.object %>
               <div class="form-group">
                 <%= f.label :name, 'お名前' %><%= render 'badge' %>
                 <%= f.text_field :name, class: 'form-control' %>
               </div>
-              
+
               <div class="form-group">
                 <%= f.label :tel, '電話番号' %><%= render 'badge' %>
                 <%= f.text_field :tel, class: 'form-control' %>
               </div>
-              
+
               <div class="form-group">
                 <%= f.label :email, 'メールアドレス' %><%= render 'badge' %>
                 <%= f.text_field :email, class: 'form-control' %>
               </div>
-              
+
               <div class="form-group">
                 <%= f.label :subject, '件名' %>
                 <%= f.text_field :subject, class: 'form-control' %>
               </div>
-            
+
               <div class="form-group">
                 <%= f.label :message, 'メッセージ' %><%= render 'badge' %>
                 <%= f.text_area :message, size: '8x8', class: 'form-control' %>
