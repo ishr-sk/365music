@@ -16,7 +16,7 @@ class SchedulesController < ApplicationController
   end
 
   def show
-    # もしログインユーザーではないユーザーだったら閲覧できない
+    # もしログインユーザーではないユーザーだったら編集できない
     unless @schedule.user == current_user
       redirect_to root_path
     end
