@@ -50,4 +50,7 @@ class User < ApplicationRecord
   def active_for_authentication?
     super && (self.is_deleted == false)
   end
+  
+  validates :name, length: {maximum: 10, minimum: 2}, uniqueness: true
+  validates :introduction, length: {maximum: 50}
 end

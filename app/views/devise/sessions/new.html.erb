@@ -3,7 +3,7 @@
     <div class="form-wrapper">
       <h2 class="devise-title">Log in</h2>
       <%= form_with model: @user, url: user_session_path, local: true do |f| %>
-      <%= flash[:error] %>
+      <%= render "devise/shared/error_messages", resource: resource %>
       <form>
         <div class="form-item">
           <%= f.label :email %><br />

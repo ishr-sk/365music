@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+   before_action :authenticate_user!
+
   def show
     @user = User.find(params[:id])
     # ログインユーザーのみの投稿表示
@@ -11,6 +13,12 @@ class UsersController < ApplicationController
 
   def edit
     @user = User.find(params[:id])
+    # ログインユーザーではない場合は編集できず自分のuser詳細画面に戻る
+    if @user == current_user
+      render :edit
+    else
+      redirect_to user_path(current_user)
+    end
   end
 
   def update
