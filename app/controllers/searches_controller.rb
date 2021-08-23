@@ -11,7 +11,7 @@ class SearchesController < ApplicationController
     elsif @category == "2"
       @post = Post.search(search, word).order("created_at DESC").page(params[:page]).per(9)
     else 
-      @user = User.search(search, word).page(params[:page]).per(10)
+      @user = User.search(search, word).page(params[:page]).per(6)
     end
   end
 end
