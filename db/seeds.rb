@@ -66,3 +66,28 @@ end
     { user_id: user_id, title: title, body: body, start_date: start_date, end_date: end_date }
   )
 end
+
+# post
+[
+  ["Sweet Love Shower", "", "SPACE SHOWER SWEET LOVE SHOWER 2021", "3日間本当に楽しかった！age最前最高。来年も絶対きます。#ラブシャ", 1 , File.open("./app/assets/images/post1.jpg")]
+].each do |title, artist, event, body, user_id, img|
+  Post.create!(
+    { title: title, artist: artist, event: event, body: body, user_id: user_id, image: img }
+  )
+end
+
+[
+  ["ラブシャ"]
+].each do |hashname|
+  Hashtag.create!(
+    { hashname: hashname }
+  )
+end
+
+[
+  [1, 1]
+].each do |post_id, hashtag_id|
+  PostHashtagRelation.create!(
+    { post_id: post_id, hashtag_id: hashtag_id }
+  )
+end

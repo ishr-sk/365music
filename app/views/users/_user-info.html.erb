@@ -1,7 +1,9 @@
 <div class="profile-card">
   <div class="profile-card__inner">
     <div class="profile-thumb">
-      <%= attachment_image_tag user, :profile_image, :fill, 80, 80, fallback: "noimage.jpg", class: "rounded-circle" %>
+      <span>
+        <%= attachment_image_tag user, :profile_image, fallback: "noimage.jpg", class: "info-img" %>
+      </span>
     </div>
     <div class="profile-content">
       <span class="profile-name"><%= user.name %></span>

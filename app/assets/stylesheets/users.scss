@@ -64,10 +64,11 @@ aside {
     margin-top: 20px;
     background: #fff;
 }
-.profile-thumb img {
+.info-img {
   display: block;
-    width: 100%;
-    height: auto;
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
 }
 .profile-content {
   padding: 15px;

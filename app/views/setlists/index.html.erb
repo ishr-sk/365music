@@ -2,18 +2,20 @@
   <%= render 'layouts/header' %>
 </div>
 
-<div class='container'>
-  <div class="row justify-content-end">
-    <%= render 'searches/search-form' %>
+<div class="sub-title">
+  <span class="title">setlist</span>
+</div>
+
+<div class="row justify-content-end">
+  <%= render 'searches/search-form' %>
+</div>
+<div class='row justify-content-center mt-5'>
+  <div class="col-sm-3 px-sm-0 mx-auto">
+    <% if user_signed_in? %>
+      <%= link_to 'new setlist', new_setlist_path, class: 'btn_setlist no-underline' %>
+    <% end %>
   </div>
-  <div class='row justify-content-center'>
-    <div class="col-sm-3 px-sm-0 mx-auto">
-      <% if user_signed_in? %>
-        <%= link_to 'new setlist', new_setlist_path, class: 'btn_setlist no-underline' %>
-      <% end %>
-    </div>
-  </div>
-  <div class="col-sm-8 px-sm-0 mx-auto">
-    <%= render 'index', setlists: @setlists %>
-  </div>
+</div>
+<div class="col-sm-8 px-sm-0 mx-auto">
+  <%= render 'index', setlists: @setlists %>
 </div>
