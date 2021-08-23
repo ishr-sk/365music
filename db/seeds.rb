@@ -16,6 +16,8 @@
   )
 end
 
+
+# セットリスト
 [
   ["Creepy Nuts", "2019-12-07 19:00:00", "ワンマンツアー 2019 「よふかしのうた」", "新木場STUDIO COAST (東京都)"],
   ["Age Factory", "2019-09-22 15:20:00", "山人音楽祭 2019", "榛名 at ヤマダグリーンドーム前橋 (群馬県)"]
@@ -49,5 +51,17 @@ end
 ].each do |setlist_id, title|
   Encore.create!(
     { setlist_id: setlist_id, title: title }
+  )
+end
+
+# スケジュール
+[
+  [1, "live", "ageのライブに行く！", "2021-08-31 19:00:00", "2021-08-31 21:00:00"],
+  [1, "Fes", "fesに行く！", "2021-09-18 11:00:00", "2021-09-19 21:00:00"],
+  [1, "live", "ageのライブに行く！", "2021-10-08 19:00:00", "2021-10-08 21:00:00"],
+  [1, "live", "ageのライブに行く！", "2021-10-20 19:00:00", "2021-10-20 21:00:00"]
+].each do |user_id, title, body, start_date, end_date|
+  Schedule.create!(
+    { user_id: user_id, title: title, body: body, start_date: start_date, end_date: end_date }
   )
 end
