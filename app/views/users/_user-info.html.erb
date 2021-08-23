@@ -5,7 +5,7 @@
     </div>
     <div class="profile-content">
       <span class="profile-name"><%= user.name %></span>
-      <span class="profile-artist">favorite artist<i class="fas fa-headphones-alt"></i><%= user.artist %></span>
+      <span class="profile-artist">favorite artist <i class="fas fa-headphones-alt"></i> <%= user.artist %></span>
       <span class="follo-count">
         <%= link_to followings_user_path(user.id), class: "no-underline" do %>
           <%= user.followings.count %> フォロー中
