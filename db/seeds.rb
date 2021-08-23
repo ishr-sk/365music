@@ -11,13 +11,14 @@
     name: "user#{n + 1}",
     password: '123456',
     password_confirmation: '123456',
+    artist: "xxx#{n + 1}",
     profile_image: File.open("./app/assets/images/test#{n + 1}.jpg")
   )
 end
 
-
 [
-  ["Creepy Nuts", "2019-12-07 19:00:00", "ワンマンツアー 2019 「よふかしのうた」", "新木場STUDIO COAST (東京都)"]
+  ["Creepy Nuts", "2019-12-07 19:00:00", "ワンマンツアー 2019 「よふかしのうた」", "新木場STUDIO COAST (東京都)"],
+  ["Age Factory", "2019-09-22 15:20:00", "山人音楽祭 2019", "榛名 at ヤマダグリーンドーム前橋 (群馬県)"]
 ].each do |artist, date, event, venue|
   Setlist.create!(
     { artist: artist, date: date, event: event, venue: venue }
@@ -29,7 +30,13 @@ end
   [1, "手練手管"],
   [1, "紙様"],
   [1, "犬も食わない"],
-  [1, "助演男優賞"]
+  [1, "助演男優賞"],
+  [2, "CLOSE EYE"],
+  [2, "WORLD IS MINE"],
+  [2, "HIGH WAY BEACH"],
+  [2, "GOLD"],
+  [2, "TONBO"],
+  [2, "See you in my dream"]
 ].each do |setlist_id, title|
   Song.create!(
     { setlist_id: setlist_id, title: title }
