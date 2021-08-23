@@ -11,6 +11,7 @@
     name: "user#{n + 1}",
     password: '123456',
     password_confirmation: '123456',
+    introduction: "I am 2#{n + 1}. / engineer / Tokyo, Japan / love for music",
     artist: "xxx#{n + 1}",
     profile_image: File.open("./app/assets/images/test#{n + 1}.jpg")
   )
