@@ -2,8 +2,8 @@ class Post < ApplicationRecord
   belongs_to :user
   attachment :image
 
-  has_many :post_hashtag_relations
-  has_many :hashtags, through: :post_hashtag_relations
+  has_many :post_hashtag_relations, dependent: :destroy
+  has_many :hashtags, through: :post_hashtag_relations, dependent: :destroy
   has_many :post_comments, dependent: :destroy
   has_many :likes, dependent: :destroy
 
