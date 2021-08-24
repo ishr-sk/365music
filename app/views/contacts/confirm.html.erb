@@ -4,7 +4,7 @@
       <div class='row'>
         <div class="col-sm-12 col-md-8 col-lg-5 px-5 px-sm-0 mx-auto">
           <h4>お問い合わせ内容</h4>
-            <%= form_with model: @contact do |f| %>
+            <%= form_with model: @contact, local: true do |f| %>
               <table class="table">
                 <tr>
                   <th>お名前</th>
@@ -44,7 +44,7 @@
               </table>
               <%= f.submit '送信', class: 'btn_9 no-underline mb-3' %>
             <% end %>
-            <%= form_with model: @contact, url: back_path do |f| %>
+            <%= form_with model: @contact, url: back_path, local: true do |f| %>
               <%= f.hidden_field :name %>
               <%= f.hidden_field :tel %>
               <%= f.hidden_field :email %>

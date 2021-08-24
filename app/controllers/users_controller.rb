@@ -33,13 +33,13 @@ class UsersController < ApplicationController
   # フォロー一覧
   def followings
     user = User.find(params[:id])
-    @users = user.followings.order("created_at DESC").page(params[:page]).per(6)
+    @users = user.followings.where(is_deleted: false).order("created_at DESC").page(params[:page]).per(6)
   end
 
   # フォロワー一覧
   def followers
     user = User.find(params[:id])
-    @users = user.followers.order("created_at DESC").page(params[:page]).per(6)
+    @users = user.followers.where(is_deleted: false).order("created_at DESC").page(params[:page]).per(6)
   end
 
   # 退会画面
