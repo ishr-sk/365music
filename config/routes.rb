@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   root to: 'homes#top'
+  # ゲストログイン
+  post '/homes/guest_sign_in', to: 'homes#guest_sign_in'
   devise_for :users
 
   resources :posts, only: [:new, :create, :index, :show, :edit, :update, :destroy] do

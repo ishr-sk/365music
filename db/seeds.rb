@@ -17,6 +17,17 @@
   )
 end
 
+User.create!(name: 'Guest',
+             email: 'guest@example.com',
+             password: '123456',
+             password_confirmation: '123456',
+             introduction: "I am 30. / engineer / Tokyo, Japan / love for music",
+             artist: "ABC",
+             created_at: Time.zone.now,
+             updated_at: Time.zone.now,
+             profile_image: File.open("./app/assets/images/guest.jpg"),
+             guest: true)
+
 
 # セットリスト
 [

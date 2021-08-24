@@ -5,7 +5,7 @@
     <p>365日、音楽と共に。</p>
     <!--ログインしていない人のみ表示-->
     <% unless user_signed_in? %>
-      <%= link_to "start", new_user_session_path, class: "home-button no-underline" %>
+      <%= link_to 'guest', homes_guest_sign_in_path, method: :post, class: "home-button no-underline" %>
     <% end %>
   </div>
 </div>
