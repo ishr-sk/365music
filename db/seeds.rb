@@ -146,3 +146,30 @@ end
     { post_id: post_id, hashtag_id: hashtag_id }
   )
 end
+
+#フォロー
+[
+  [1, 7],
+  [1, 3],
+  [1, 5],
+  [2, 1],
+  [2, 3],
+  [3, 2],
+  [3, 1],
+  [3, 4],
+  [4, 1],
+  [4, 3],
+  [4, 5],
+  [4, 7],
+  [5, 2],
+  [5, 6],
+  [6, 2],
+  [6, 5],
+  [7, 1],
+  [7, 3],
+  [7, 6]
+].each do |follower_id, followed_id|
+  Relationship.create!(
+    { follower_id: follower_id, followed_id: followed_id }
+  )
+end
