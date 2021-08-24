@@ -19,7 +19,7 @@ class SetlistsController < ApplicationController
   end
 
   def index
-    @setlists = Setlist.order("created_at DESC").page(params[:page]).per(6)
+    @setlists = Setlist.order("created_at DESC").page(params[:page]).per(5)
   end
 
   def edit

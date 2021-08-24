@@ -21,7 +21,11 @@ end
 # セットリスト
 [
   ["Creepy Nuts", "2019-12-07 19:00:00", "ワンマンツアー 2019 「よふかしのうた」", "新木場STUDIO COAST (東京都)"],
-  ["Age Factory", "2019-09-22 15:20:00", "山人音楽祭 2019", "榛名 at ヤマダグリーンドーム前橋 (群馬県)"]
+  ["Age Factory", "2019-09-22 15:20:00", "山人音楽祭 2019", "榛名 at ヤマダグリーンドーム前橋 (群馬県)"],
+  ["ONE OK ROCK", "2020-01-29 18:30:00", "ONE OK ROCK 2019 - 2020 「Eye of the Storm」 JAPAN TOUR", "国立代々木競技場 第一体育館 (東京都)"],
+  ["BBHF", "2021-05-03 11:15:00", "VIVA LA ROCK 2021", "CAVE STAGE at さいたまスーパーアリーナ (埼玉県)"],
+  ["Awesome City Club", "2021-05-22 19:50:00", "BAYCAMP 2021 「DOORS」", "DOORS STAGE at USEN STUDIO COAST (東京都)"],
+  ["yonige", "2021-08-20 12:50:00", "FUJI ROCK FESTIVAL'21", "GREEN STAGE at 苗場スキー場 (新潟県)"]
 ].each do |artist, date, event, venue|
   Setlist.create!(
     { artist: artist, date: date, event: event, venue: venue }
@@ -39,7 +43,55 @@ end
   [2, "HIGH WAY BEACH"],
   [2, "GOLD"],
   [2, "TONBO"],
-  [2, "See you in my dream"]
+  [2, "See you in my dream"],
+  [3, "Eye of the Storm"],
+  [3, "Take me to the top"],
+  [3, "We are"],
+  [3, "Taking Off"],
+  [3, "Re:make"],
+  [3, "Can't Wait"],
+  [3, "Clock Strikes"],
+  [3, "Head High"],
+  [3, "Grow Old Die Young"],
+  [3, "Change"],
+  [3, "Worst in Me"],
+  [3, "Be the light"],
+  [3, "In the Stars"],
+  [3, "Push Back"],
+  [3, "キミシダイ列車"],
+  [3, "じぶんROCK"],
+  [3, "Giants"],
+  [3, "The Beginning"],
+  [3, "Mighty Long Fall"],
+  [3, "Wasted Nights"],
+  [4, "流氷"],
+  [4, "恋の寿命 [Galileo Galilei]"],
+  [4, "君はさせてくれる"],
+  [4, "あこがれ"],
+  [4, "真夜中のダンス"],
+  [4, "Work"],
+  [5, "Sing out loud, Bring it on down"],
+  [5, "アウトサイダー"],
+  [5, "Don't Think, Feel"],
+  [5, "今夜だけ間違いじゃないことにしてあげる"],
+  [5, "青春の胸騒ぎ"],
+  [5, "まばたき"],
+  [5, "勿忘"],
+  [6, "11月24日"],
+  [6, "ここじゃない場所"],
+  [6, "2月の水槽"],
+  [6, "バッドエンド週末"],
+  [6, "往生際"],
+  [6, "催眠療法"],
+  [6, "わたしを見つけて"],
+  [6, "子どもは見ている"],
+  [6, "どこかのチャイム"],
+  [6, "27歳"],
+  [6, "サイケデリックイエスタデイ"],
+  [6, "ピオニー"],
+  [6, "トラック"],
+  [6, "対岸の彼女"],
+  [6, "最愛の恋人たち"]
 ].each do |setlist_id, title|
   Song.create!(
     { setlist_id: setlist_id, title: title }
@@ -48,7 +100,10 @@ end
 
 [
   [1, "スポットライト"],
-  [1, "生業"]
+  [1, "生業"],
+  [3, "Stand Out Fit In"],
+  [3, "完全感覚Dreamer"],
+  [4, "夜汽車は走る"]
 ].each do |setlist_id, title|
   Encore.create!(
     { setlist_id: setlist_id, title: title }
