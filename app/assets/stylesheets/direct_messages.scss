@@ -1,48 +1,48 @@
 /*吹き出し*/
 .balloon_l,
-.balloon_r{
+.balloon_r {
   margin: 30px 0;
-  display:flex;
+  display: flex;
   justify-content: flex-start;
   align-items: flex-start; /*縦位置を上揃え*/
 /*   align-items: center; */ /*縦位置を真ん中揃え*/
 }
-.balloon_r{
-  justify-content:flex-end;
+.balloon_r {
+  justify-content: flex-end;
 }
-.faceicon img{
+.faceicon img {
   border-radius: 50%;
   width: 50px;
   height: 50px;
   object-fit: cover;
 }
-.balloon_r .faceicon{
-  margin-left:25px;
+.balloon_r .faceicon {
+  margin-left: 25px;
 }
-.balloon_l .faceicon{
-  margin-right:25px;
+.balloon_l .faceicon {
+  margin-right: 25px;
 }
-.balloon_r .faceicon{
-  order:2 !important;
+.balloon_r .faceicon {
+  order: 2 !important;
 }
 .says {
-  max-width:500px; /*最大幅は任意*/
+  max-width: 500px; /*最大幅は任意*/
   display: flex;
   flex-wrap: wrap;
   position: relative;
   padding: 5px 15px 5px 15px;
   border-radius: 12px;
   background: #C4DFE6;/*色は任意*/
-  box-sizing:border-box;
-  margin:0 !important;
-  line-height:1.5;
+  box-sizing: border-box;
+  margin: 0 !important;
+  line-height: 1.5;
 /*   align-items: center; */
 }
-.says p{
-  margin:8px 0 0 !important;
+.says p {
+  margin: 8px 0 0 !important;
 }
-.says p:first-child{
-  margin-top:0 !important;
+.says p:first-child {
+  margin-top: 0 !important;
 }
 .says:after {
   content: "";
