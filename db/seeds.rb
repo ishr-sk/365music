@@ -140,29 +140,17 @@ end
 
 # post
 [
-  ["Sweet Love Shower", "", "SPACE SHOWER SWEET LOVE SHOWER 2021", "3日間本当に楽しかった！age最前最高。来年も絶対きます。#ラブシャ", 1 , File.open("./app/assets/images/post1.jpg")],
-  ["new CD！", "ABCw", "", "新譜すごくよかったです。特に好きな曲はwwwでした！#ABCw", 8 , File.open("./app/assets/images/post2.jpg")]
+  ["Sweet Love Shower", "", "SPACE SHOWER SWEET LOVE SHOWER 2021", "3日間本当に楽しかった！age最前最高。来年も絶対きます。#ラブシャ#agefactory", 1 , File.open("./app/assets/images/post1.jpg")],
+  ["new CD！", "くるり", "", "新譜すごくよかったです。特に好きな曲は潮風のアリアでした。#くるり", 8 , File.open("./app/assets/images/post2.jpg")],
+  ["新曲", "Age Factory", "", "新曲かっこいい。早くライブに行きたい。#agefactory", 2 , File.open("./app/assets/images/post3.jpg")],
+  ["トレーニング中", "", "", "筋トレ中に聞くとテンションあがるプレイリスト考え中。おすすめあったら教えてください！", 3 , File.open("./app/assets/images/post4.jpg")],
+  ["summer", "", "Summer Sonic", "あの暑い夏をもう一度。#summersonic#サマソニ", 4 , File.open("./app/assets/images/post5.jpg")],
+  ["FUJI ROCK", "Awesome City Club", "FUJI ROCK FESTIVAL'21", "爽やかな朝。素敵な時間でした。#fujirock#フジロック", 5 , File.open("./app/assets/images/post6.jpg")],
+  ["久々のライブ", "Creepy Nuts", "melodixfes", "あっという間だった。かっこよかった#creepynuts", 6 , File.open("./app/assets/images/post7.jpg")],
+  ["おうちフェス", "", "FUJI ROCK FESTIVAL'21", "今年はおうちでゆったり楽しみました。来年は行けるといいな。#fujirock#フジロック", 7 , File.open("./app/assets/images/post8.jpg")]
 ].each do |title, artist, event, body, user_id, img|
   Post.create!(
     { title: title, artist: artist, event: event, body: body, user_id: user_id, image: img }
-  )
-end
-
-[
-  ["ラブシャ"],
-  ["ABCw"]
-].each do |hashname|
-  Hashtag.create!(
-    { hashname: hashname }
-  )
-end
-
-[
-  [1, 1],
-  [2, 2],
-].each do |post_id, hashtag_id|
-  PostHashtagRelation.create!(
-    { post_id: post_id, hashtag_id: hashtag_id }
   )
 end
 
