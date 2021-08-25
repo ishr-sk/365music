@@ -339,3 +339,13 @@ div .card {
   max-width: 100%;
   flex-shrink: 0;
 }
+
+b a {
+  color: #000000;
+  text-decoration: none;
+}
+
+b a:hover {
+  color: #808080;
+  text-decoration: none;
+}

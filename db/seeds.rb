@@ -140,7 +140,8 @@ end
 
 # post
 [
-  ["Sweet Love Shower", "", "SPACE SHOWER SWEET LOVE SHOWER 2021", "3日間本当に楽しかった！age最前最高。来年も絶対きます。#ラブシャ", 1 , File.open("./app/assets/images/post1.jpg")]
+  ["Sweet Love Shower", "", "SPACE SHOWER SWEET LOVE SHOWER 2021", "3日間本当に楽しかった！age最前最高。来年も絶対きます。#ラブシャ", 1 , File.open("./app/assets/images/post1.jpg")],
+  ["new CD！", "ABCw", "", "新譜すごくよかったです。特に好きな曲はwwwでした！#ABCw", 8 , File.open("./app/assets/images/post2.jpg")]
 ].each do |title, artist, event, body, user_id, img|
   Post.create!(
     { title: title, artist: artist, event: event, body: body, user_id: user_id, image: img }
@@ -148,7 +149,8 @@ end
 end
 
 [
-  ["ラブシャ"]
+  ["ラブシャ"],
+  ["ABCw"]
 ].each do |hashname|
   Hashtag.create!(
     { hashname: hashname }
@@ -156,7 +158,8 @@ end
 end
 
 [
-  [1, 1]
+  [1, 1],
+  [2, 2],
 ].each do |post_id, hashtag_id|
   PostHashtagRelation.create!(
     { post_id: post_id, hashtag_id: hashtag_id }
