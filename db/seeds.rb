@@ -19,14 +19,14 @@ end
 
 User.create!(
   name: 'Guest',
-             email: 'guest@example.com',
-             password: '123456',
-             password_confirmation: '123456',
-             introduction: "I am 30. / engineer / Tokyo, Japan / love for music",
-             artist: "ABC",
-             created_at: Time.zone.now,
-             updated_at: Time.zone.now,
-             profile_image: File.open("./app/assets/images/guest.jpg")
+  email: 'guest@example.com',
+  password: '123456',
+  password_confirmation: '123456',
+  introduction: "I am 30. / engineer / Tokyo, Japan / love for music",
+  artist: "ABC",
+  created_at: Time.zone.now,
+  updated_at: Time.zone.now,
+  profile_image: File.open("./app/assets/images/guest.jpg")
 )
 
 
@@ -190,12 +190,39 @@ end
   [8, 4],
   [8, 5],
   [8, 6],
+  [8, 7],
   [1, 8],
   [2, 8],
   [3, 8],
-  [4, 8]
+  [4, 8],
+  [5, 8],
+  [6, 8],
+  [7, 8]
 ].each do |follower_id, followed_id|
   Relationship.create!(
     { follower_id: follower_id, followed_id: followed_id }
+  )
+end
+
+# DM
+Room.create!(
+  created_at: Time.zone.now,
+  updated_at: Time.zone.now
+)
+[
+  [8, 1],
+  [4, 1]
+].each do |user_id, room_id|
+  Entry.create!(
+    { user_id: user_id, room_id: room_id }
+  )
+end
+
+[
+  [8, 1, "はじめまして！"],
+  [4, 1, "よろしくお願いします＾＾"]
+].each do |user_id, room_id, message|
+  DirectMessage.create!(
+    { user_id: user_id, room_id: room_id, message: message }
   )
 end
