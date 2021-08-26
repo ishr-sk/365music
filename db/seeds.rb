@@ -220,7 +220,8 @@ end
 
 # いいね
 [
-  [8, 1]
+  [8, 1],
+  [8, 7]
 ].each do |user_id, post_id|
   Like.create!(
     { user_id: user_id, post_id: post_id }
