@@ -27,7 +27,7 @@
 
 ## 設計書
 - 画面遷移図
-![Untitled Diagram](https://user-images.githubusercontent.com/84176168/128115903-34ab5d87-c835-46aa-b3fc-baeffa3288cb.jpg)
+![365music_画面遷移図](https://user-images.githubusercontent.com/84176168/131148542-d4000450-9393-4117-b793-96bc7618ad52.jpg)
 - ER図
 ![365music_ER](https://user-images.githubusercontent.com/84176168/131140203-04bad33d-2476-4e60-b70a-c30b3e9e4772.jpg)
 - アプリケーション詳細設計
