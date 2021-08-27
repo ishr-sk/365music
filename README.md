@@ -1,4 +1,5 @@
 # 365music
+![readme-top](https://user-images.githubusercontent.com/84176168/131131476-0c63c84c-ca21-4a0f-8c5a-0a69643c2813.png)
 
 ## サイト概要
 聞いた楽曲の感想や、行ったライブ・フェスの感想など音楽にまつわることを自由に呟けるSNSサイト。
