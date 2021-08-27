@@ -29,7 +29,7 @@
 - 画面遷移図
 ![Untitled Diagram](https://user-images.githubusercontent.com/84176168/128115903-34ab5d87-c835-46aa-b3fc-baeffa3288cb.jpg)
 - ER図
-![ER図](https://user-images.githubusercontent.com/84176168/128313726-7de396e2-5191-43bb-9718-f6081aa5fd4a.jpg)
+![365music_ER](https://user-images.githubusercontent.com/84176168/131140203-04bad33d-2476-4e60-b70a-c30b3e9e4772.jpg)
 - アプリケーション詳細設計
 ![PF_365music_アプリケーション詳細設計](https://user-images.githubusercontent.com/84176168/131137786-fec7d8a4-6575-42ab-ad13-16b796e6fbe0.jpg)
 - テーブル定義書
