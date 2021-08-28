@@ -75,6 +75,16 @@ https://docs.google.com/spreadsheets/d/13xkINjyrOy5WzcaNKxclcb0LEL1ItdBBcmNCpK8X
 - JSライブラリ：jQuery
 - IDE：Cloud9
 
+## 構築方法
+```
+$ git clone https://github.com/ishr-sk/365music.git
+$ cd music365
+$ bundle install
+$ rails db:migrate
+$ rails db:seed
+$ rails s
+```
+
 ## 使用素材
 - 無料写真素材：Pexels（https://www.pexels.com/ja-jp/）
 - イラスト：Loose Drawing（https://loosedrawing.com/）
