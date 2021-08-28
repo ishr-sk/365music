@@ -47,8 +47,10 @@ https://docs.google.com/spreadsheets/d/13xkINjyrOy5WzcaNKxclcb0LEL1ItdBBcmNCpK8X
 ![365music_非同期通信](https://user-images.githubusercontent.com/84176168/131218976-d3854894-faeb-4276-a764-44a03b9ad921.gif)
 - カレンダー機能（スケジュール登録）  
 ![365music_カレンダー機能](https://user-images.githubusercontent.com/84176168/131219312-8b637bc4-6296-497a-8b09-3b3da706c9ca.gif)
-- フォームの追加・（Coccon）  
+- フォームの追加・削除（Coccon）  
 ![365music_cocoonフォーム](https://user-images.githubusercontent.com/84176168/131219722-5bbe9c2a-06b2-42b3-a734-77ef7d91d3db.gif)
+- 検索機能  
+![365music_検索機能](https://user-images.githubusercontent.com/84176168/131219900-b68abed6-2d2e-47c5-bc71-e26f4a4d7694.gif)
 
 ## 開発環境
 - OS：Linux(CentOS)
