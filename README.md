@@ -38,8 +38,9 @@ https://docs.google.com/spreadsheets/d/10bgqbl-mJ0v9IErz8Or6WT0r02H-692C4Relbp5o
 ## チャレンジ要素一覧
 https://docs.google.com/spreadsheets/d/13xkINjyrOy5WzcaNKxclcb0LEL1ItdBBcmNCpK8X95I/edit?usp=sharing
 
-##demo
-![download](https://user-images.githubusercontent.com/84176168/131207728-2cb6c022-7ed3-4ac0-85fa-71052f1850e8.gif)
+## demo
+- topページ
+![365music_top](https://user-images.githubusercontent.com/84176168/131208073-698cafe0-f811-4cea-abc5-4ba1aa57427a.gif)
 
 ## 開発環境
 - OS：Linux(CentOS)
