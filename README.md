@@ -49,6 +49,7 @@ https://docs.google.com/spreadsheets/d/13xkINjyrOy5WzcaNKxclcb0LEL1ItdBBcmNCpK8X
 - いいね機能（Ajax）
 - コメント機能（Ajax）
 - フォロー機能
+- ダイレクトメッセージ機能
 - カレンダー機能（スケジュール登録）
 - 検索機能
 - お問い合わせ機能
@@ -67,6 +68,8 @@ https://docs.google.com/spreadsheets/d/13xkINjyrOy5WzcaNKxclcb0LEL1ItdBBcmNCpK8X
 ![365music_cocoonフォーム](https://user-images.githubusercontent.com/84176168/131219722-5bbe9c2a-06b2-42b3-a734-77ef7d91d3db.gif)
 - 検索機能  
 ![365music_検索機能](https://user-images.githubusercontent.com/84176168/131219900-b68abed6-2d2e-47c5-bc71-e26f4a4d7694.gif)
+- ハッシュタグ検索  
+![365music_ハッシュタグ検索](https://user-images.githubusercontent.com/84176168/131222414-d101b4e2-b8ce-4ca4-9deb-2288bbd9862b.gif)
 
 ## 開発環境
 - OS：Linux(CentOS)
