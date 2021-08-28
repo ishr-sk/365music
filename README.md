@@ -43,7 +43,7 @@ https://docs.google.com/spreadsheets/d/13xkINjyrOy5WzcaNKxclcb0LEL1ItdBBcmNCpK8X
 ![365music_top](https://user-images.githubusercontent.com/84176168/131208073-698cafe0-f811-4cea-abc5-4ba1aa57427a.gif)
 - ゲストログイン  
 ![365music_guestbtn](https://user-images.githubusercontent.com/84176168/131211526-9052842f-377a-447e-afcd-def25d42586d.gif)
-- いいね機能・コメント機能の非同期通信化
+- いいね機能・コメント機能の非同期通信化  
 ![365music_非同期通信](https://user-images.githubusercontent.com/84176168/131218976-d3854894-faeb-4276-a764-44a03b9ad921.gif)
 
 ## 開発環境
