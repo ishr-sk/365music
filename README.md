@@ -38,7 +38,7 @@ https://docs.google.com/spreadsheets/d/10bgqbl-mJ0v9IErz8Or6WT0r02H-692C4Relbp5o
 ## チャレンジ要素一覧
 https://docs.google.com/spreadsheets/d/13xkINjyrOy5WzcaNKxclcb0LEL1ItdBBcmNCpK8X95I/edit?usp=sharing
 
-## demo
+## 動作デモ
 - topページ  
 ![365music_top](https://user-images.githubusercontent.com/84176168/131208073-698cafe0-f811-4cea-abc5-4ba1aa57427a.gif)
 - ゲストログイン  
@@ -47,6 +47,8 @@ https://docs.google.com/spreadsheets/d/13xkINjyrOy5WzcaNKxclcb0LEL1ItdBBcmNCpK8X
 ![365music_非同期通信](https://user-images.githubusercontent.com/84176168/131218976-d3854894-faeb-4276-a764-44a03b9ad921.gif)
 - カレンダー機能（スケジュール登録）  
 ![365music_カレンダー機能](https://user-images.githubusercontent.com/84176168/131219312-8b637bc4-6296-497a-8b09-3b3da706c9ca.gif)
+- フォームの追加・（Coccon）  
+![365music_cocoonフォーム](https://user-images.githubusercontent.com/84176168/131219722-5bbe9c2a-06b2-42b3-a734-77ef7d91d3db.gif)
 
 ## 開発環境
 - OS：Linux(CentOS)
