@@ -75,6 +75,18 @@ https://docs.google.com/spreadsheets/d/13xkINjyrOy5WzcaNKxclcb0LEL1ItdBBcmNCpK8X
 - JSライブラリ：jQuery
 - IDE：Cloud9
 
+## 使用技術
+- Ruby 2.6.3
+- Ruby on Rails 5.2.5
+- MySQL
+- AWS
+    - VPC
+    - EC2
+    - RDS
+- Nginx
+- Puma
+- RSpec
+
 ## 構築方法
 ```
 $ git clone https://github.com/ishr-sk/365music.git
