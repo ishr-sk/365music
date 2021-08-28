@@ -38,6 +38,18 @@ https://docs.google.com/spreadsheets/d/10bgqbl-mJ0v9IErz8Or6WT0r02H-692C4Relbp5o
 ## チャレンジ要素一覧
 https://docs.google.com/spreadsheets/d/13xkINjyrOy5WzcaNKxclcb0LEL1ItdBBcmNCpK8X95I/edit?usp=sharing
 
+## 機能一覧
+- ユーザー機能・ログイン機能（devise）
+- 投稿機能
+    - 画像投稿（refile）
+- いいね機能（Ajax）
+- コメント機能（Ajax）
+- フォロー機能
+- カレンダー機能（スケジュール登録）
+- 検索機能
+- お問い合わせ機能
+- ページネーション機能（kaminari）
+
 ## 動作デモ
 - topページ  
 ![365music_top](https://user-images.githubusercontent.com/84176168/131208073-698cafe0-f811-4cea-abc5-4ba1aa57427a.gif)
