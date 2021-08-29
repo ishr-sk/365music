@@ -9,5 +9,4 @@ class HomesController < ApplicationController
     sign_in user
     redirect_to user_path(current_user)
   end
-
 end
