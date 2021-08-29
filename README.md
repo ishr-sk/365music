@@ -101,6 +101,6 @@ $ rails s
 ```
 
 ## 使用素材
-- 無料写真素材：Pexels（https://www.pexels.com/ja-jp/）
-- イラスト：Loose Drawing（https://loosedrawing.com/）
-- ロゴメーカー：Hatchful（https://hatchful.shopify.com/ja/）
+- 無料写真素材：[Pexels](https://www.pexels.com/ja-jp/)
+- イラスト：[Loose Drawing](https://loosedrawing.com/)
+- ロゴメーカー：[Hatchful](https://hatchful.shopify.com/ja/)
