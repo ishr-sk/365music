@@ -65,7 +65,7 @@ https://docs.google.com/spreadsheets/d/13xkINjyrOy5WzcaNKxclcb0LEL1ItdBBcmNCpK8X
 - カレンダー機能（スケジュール登録）  
 ![365music_カレンダー](https://user-images.githubusercontent.com/84176168/131500426-4e20a1c8-835a-496a-aebb-15e442dbdd5e.gif)
 - フォームの追加・削除（Coccon）  
-![365music_cocoonフォーム](https://user-images.githubusercontent.com/84176168/131219722-5bbe9c2a-06b2-42b3-a734-77ef7d91d3db.gif)
+![365music_cocoonフォーム](https://user-images.githubusercontent.com/84176168/131500987-3a257fbd-8b71-4fad-913e-c3a64b82e92e.gif)
 - 検索機能  
 ![365music_検索機能](https://user-images.githubusercontent.com/84176168/131219900-b68abed6-2d2e-47c5-bc71-e26f4a4d7694.gif)
 - ハッシュタグ検索  
