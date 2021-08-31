@@ -61,7 +61,7 @@ https://docs.google.com/spreadsheets/d/13xkINjyrOy5WzcaNKxclcb0LEL1ItdBBcmNCpK8X
 - ゲストログイン  
 ![365music_guestbtn](https://user-images.githubusercontent.com/84176168/131211526-9052842f-377a-447e-afcd-def25d42586d.gif)
 - いいね機能・コメント機能の非同期通信化  
-![365music_非同期通信](https://user-images.githubusercontent.com/84176168/131218976-d3854894-faeb-4276-a764-44a03b9ad921.gif)
+![365music_like](https://user-images.githubusercontent.com/84176168/131499652-f6222cbe-77f2-489d-95a3-262c9f12d5b6.gif)
 - カレンダー機能（スケジュール登録）  
 ![365music_カレンダー機能](https://user-images.githubusercontent.com/84176168/131219312-8b637bc4-6296-497a-8b09-3b3da706c9ca.gif)
 - フォームの追加・削除（Coccon）  
