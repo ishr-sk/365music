@@ -63,7 +63,7 @@ https://docs.google.com/spreadsheets/d/13xkINjyrOy5WzcaNKxclcb0LEL1ItdBBcmNCpK8X
 - いいね機能・コメント機能の非同期通信化  
 ![365music_like](https://user-images.githubusercontent.com/84176168/131499652-f6222cbe-77f2-489d-95a3-262c9f12d5b6.gif)
 - カレンダー機能（スケジュール登録）  
-![365music_カレンダー機能](https://user-images.githubusercontent.com/84176168/131219312-8b637bc4-6296-497a-8b09-3b3da706c9ca.gif)
+![365music_カレンダー](https://user-images.githubusercontent.com/84176168/131500426-4e20a1c8-835a-496a-aebb-15e442dbdd5e.gif)
 - フォームの追加・削除（Coccon）  
 ![365music_cocoonフォーム](https://user-images.githubusercontent.com/84176168/131219722-5bbe9c2a-06b2-42b3-a734-77ef7d91d3db.gif)
 - 検索機能  
