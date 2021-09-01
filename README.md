@@ -2,7 +2,7 @@
 
 ## 🌐 App URL
 
-### **http://52.196.17.34/**  
+### **http://52.196.17.34/**
 ![readme-top](https://user-images.githubusercontent.com/84176168/131131476-0c63c84c-ca21-4a0f-8c5a-0a69643c2813.png)
 
 ## サイト概要
@@ -50,25 +50,25 @@ https://docs.google.com/spreadsheets/d/13xkINjyrOy5WzcaNKxclcb0LEL1ItdBBcmNCpK8X
 - コメント機能（Ajax）
 - フォロー機能
 - ダイレクトメッセージ機能
-- カレンダー機能（スケジュール登録）
+- カレンダー機能（FullCalendar）
 - 検索機能
 - お問い合わせ機能
 - ページネーション機能（kaminari）
 
 ## 動作デモ
-- topページ  
+- topページ
 ![365music_top](https://user-images.githubusercontent.com/84176168/131208073-698cafe0-f811-4cea-abc5-4ba1aa57427a.gif)
-- ゲストログイン  
+- ゲストログイン
 ![365music_guestbtn](https://user-images.githubusercontent.com/84176168/131211526-9052842f-377a-447e-afcd-def25d42586d.gif)
-- いいね機能・コメント機能の非同期通信化  
+- いいね機能・コメント機能の非同期通信化
 ![365music_like](https://user-images.githubusercontent.com/84176168/131499652-f6222cbe-77f2-489d-95a3-262c9f12d5b6.gif)
-- カレンダー機能（FullCalendar）  
+- カレンダー機能（FullCalendar）
 ![365music_カレンダー](https://user-images.githubusercontent.com/84176168/131500426-4e20a1c8-835a-496a-aebb-15e442dbdd5e.gif)
-- フォームの追加・削除（Coccon）  
+- フォームの追加・削除（Coccon）
 ![365music_cocoonフォーム](https://user-images.githubusercontent.com/84176168/131500987-3a257fbd-8b71-4fad-913e-c3a64b82e92e.gif)
-- 検索機能  
+- 検索機能
 ![365music_検索機能](https://user-images.githubusercontent.com/84176168/131219900-b68abed6-2d2e-47c5-bc71-e26f4a4d7694.gif)
-- ハッシュタグ検索  
+- ハッシュタグ検索
 ![365music_ハッシュタグ検索](https://user-images.githubusercontent.com/84176168/131222414-d101b4e2-b8ce-4ca4-9deb-2288bbd9862b.gif)
 
 ## 開発環境
