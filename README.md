@@ -93,7 +93,7 @@ https://docs.google.com/spreadsheets/d/13xkINjyrOy5WzcaNKxclcb0LEL1ItdBBcmNCpK8X
 ## 構築方法
 ```
 $ git clone https://github.com/ishr-sk/365music.git
-$ cd music365
+$ cd 365music
 $ bundle install
 $ rails db:migrate
 $ rails db:seed
